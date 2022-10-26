@@ -1,0 +1,27 @@
+.navbar {
+  position: relative;
+}
+.dropdown:hover #dropdown-1 {
+  position: absolute;
+  display: block;
+  width: 260px;
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nestedDropdown:hover .dropdown-2 {
+  position: absolute;
+  display: block;
+  width: 220px;
+  border-radius: 2px;
+  padding: 4px 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#dropdown-1,
+.dropdown-2 {
+  background-color: white;
+  width: 200px;
+  display: none;
+}
