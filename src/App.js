@@ -2,12 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About";
 import Navbar from "./Components/Navbar";
+import NotFound from "./Components/NotFound";
 import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
 import Contact from "./Pages/Contact";
 import GoverningPanel from "./Pages/GoverningPanel";
 import Home from "./Pages/Home";
-import NotFound from "./Pages/NotFound";
 
 function App() {
   return (

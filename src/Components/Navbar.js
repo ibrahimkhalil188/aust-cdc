@@ -26,25 +26,25 @@ const Navbar = () => {
       <nav id="navbar" className="flex justify-between items-center h-[85px] my-2 p-4 text-xl text-primary font-bold">
         <div>
           <ul className="flex">
-            <li className="mx-6 cursor-pointer"><Link to="/">Home</Link></li>
-            <li className="dropdown  cursor-pointer mx-6">
+            <li className="mx-6 cursor-pointer different"><Link to="/">Home</Link></li>
+            <li className="dropdown  cursor-pointer mx-6 different">
            <Link to="/governingPanel">Governing Panel</Link>
               <ul id="dropdown-1" className="border-1">
-                <li className="nestedDropdown mt-2 hover:pb-16">Fall 21 panel
+                <li className="nestedDropdown mt-2 hover:pb-16 different">Fall 21 panel
                 <ul className="dropdown-2 ml-32 mt-[-32px]" >
-                  <li className="my-2">Executive Body</li>
-                  <li className="my-2">Sub-Executive Body</li>
+                  <li className="my-2 different">Executive Body</li>
+                  <li className="my-2 different">Sub-Executive Body</li>
                 </ul>
                 </li>
-                <li className="nestedDropdown mt-2 pb-16 pt-4">Spring 21 panel
+                <li className="nestedDropdown mt-2 pb-16 pt-4 different">Spring 21 panel
                 <ul className="dropdown-2 ml-4" >
-                  <li className="my-2">Executive Body</li>
-                  <li className="my-2">Sub-Executive Body</li>
+                  <li className="my-2 different">Executive Body</li>
+                  <li className="my-2 different">Sub-Executive Body</li>
                 </ul>
                 </li>
               </ul>
             </li>
-            <li className="mx-4 cursor-pointer"><Link to="/clubStructure">Club Structure</Link> </li>
+            <li className="mx-4 cursor-pointer different"><Link to="/clubStructure ">Club Structure</Link> </li>
           </ul>
         </div>
         <div className="p-4">
@@ -56,9 +56,9 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="flex">
-            <li className="mx-4 cursor-pointer"><Link to="/captureCollection">Capture Collections</Link></li>
-            <li className="mx-4 cursor-pointer"><Link to="/about">About us</Link></li>
-            <li className="mx-4  cursor-pointer"><Link to="contact">Contact us</Link></li>
+            <li className="mx-4 cursor-pointer different"><Link to="/captureCollection ">Capture Collections</Link></li>
+            <li className="mx-4 cursor-pointer different"><Link to="/about">About us</Link></li>
+            <li className="mx-4  cursor-pointer different"><Link to="contact">Contact us</Link></li>
           </ul>
         </div>
       </nav>

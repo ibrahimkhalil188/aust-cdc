@@ -25,3 +25,30 @@
   width: 200px;
   display: none;
 }
+
+li.different {
+  border: none;
+  position: relative;
+}
+li.different:hover {
+  border: none;
+}
+li:hover {
+  border-bottom: 5px solid #ffffff;
+}
+
+.different::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  left: 50%;
+  bottom: -4px;
+  background-color: #1b1c41;
+  transition: all ease-in-out 0.1s;
+}
+
+.different:hover::after {
+  width: 100%;
+  left: 0;
+}
