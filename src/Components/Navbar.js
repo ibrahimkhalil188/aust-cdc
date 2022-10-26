@@ -23,15 +23,15 @@ const Navbar = () => {
       }}
 
     >
-      <nav id="navbar" className="flex justify-between items-center h-[85px] my-2 p-4 text-xl text-primary">
+      <nav id="navbar" className="flex justify-between items-center h-[85px] my-2 p-4 text-xl text-primary font-bold">
         <div>
           <ul className="flex">
-            <li className="mx-4 cursor-pointer"><Link to="/">Home</Link></li>
-            <li className="dropdown  cursor-pointer">
+            <li className="mx-6 cursor-pointer"><Link to="/">Home</Link></li>
+            <li className="dropdown  cursor-pointer mx-6">
            <Link to="/governingPanel">Governing Panel</Link>
               <ul id="dropdown-1" className="border-1">
                 <li className="nestedDropdown mt-2 hover:pb-16">Fall 21 panel
-                <ul className="dropdown-2 ml-4" >
+                <ul className="dropdown-2 ml-32 mt-[-32px]" >
                   <li className="my-2">Executive Body</li>
                   <li className="my-2">Sub-Executive Body</li>
                 </ul>
@@ -44,7 +44,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="mx-4 cursor-pointer">Club Structure </li>
+            <li className="mx-4 cursor-pointer"><Link to="/clubStructure">Club Structure</Link> </li>
           </ul>
         </div>
         <div className="p-4">
@@ -56,9 +56,9 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="flex">
-            <li className="mx-4 cursor-pointer">Capture Collections</li>
+            <li className="mx-4 cursor-pointer"><Link to="/captureCollection">Capture Collections</Link></li>
             <li className="mx-4 cursor-pointer"><Link to="/about">About us</Link></li>
-            <li className="mx-4  cursor-pointer">Contact us</li>
+            <li className="mx-4  cursor-pointer"><Link to="contact">Contact us</Link></li>
           </ul>
         </div>
       </nav>
