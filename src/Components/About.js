@@ -1,16 +1,14 @@
 import React from 'react';
-import profile from '../Assets/Logo/austlogo.png';
+import whiteLogo from '../Assets/Logo/whiteLogo.png';
 const About = () => {
     return (
-        <div className='mt-[-150px]'>
+        <div>
             <div className="hero min-h-screen bg-white">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src={profile} alt="" className="w-[380px] lg:max-w-sm rounded-lg shadow-2xl" />
-                    <div className='text-black mx-6 lg:w-1/2 lg:ml-12'>
-                        <h1 className="text-5xl font-bold">About me</h1>
-                        <p className="py-6 text-xl font-serif ">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum rerum veniam? Libero quaerat dolore modi, eaque architecto dolor nobis maiores? Nisi debitis sunt fugiat minima sit, enim ipsam possimus doloribus fuga fugit ea, expedita adipisci harum recusandae laboriosam deserunt!
-                        </p>
+                <div className="hero-content flex-col lg:flex-row justify-between">
+                    <img src={whiteLogo} alt="" className="w-[310px] lg:max-w-sm rounded-lg shadow-2xl" />
+                    <div className='text-black ml-6 lg:ml-12'>
+                        <h1 className="text-4xl text-primary border-b-4 border-primary font-bold uppercase mt-[-300px]">aust career development club</h1>
+                        
                     </div>
                 </div>
             </div>
