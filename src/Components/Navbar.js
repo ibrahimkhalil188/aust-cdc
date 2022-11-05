@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 import logo from "../Assets/Logo/austlogo.png";
 import "../Style/Navbar.style.css";
@@ -13,14 +14,16 @@ const Navbar = () => {
   });
 
   return (
+    <div style={{
+      position: "-webkit-sticky",
+      position: "sticky",
+      top: "0",
+      backgroundColor: headerColor,
+      padding: "1px",
+      zIndex:"10"
+    }}>
     <div
-      style={{
-        position: "-webkit-sticky",
-        position: "sticky",
-        top: "0",
-        backgroundColor: headerColor,
-        padding: "1px",
-      }}
+      
     >
       {/* 
       For small devise
@@ -79,7 +82,8 @@ const Navbar = () => {
         For large devise 
         */} 
 
-      <div className="hidden lg:block">
+      <div
+      className="hidden lg:block">
         <nav
           id="navbar"
           className="flex justify-between items-center h-[85px] my-2 p-4 text-xl text-primary font-bold"
@@ -135,6 +139,7 @@ const Navbar = () => {
           </div>
         </nav>
       </div>
+    </div>
     </div>
   );
 };

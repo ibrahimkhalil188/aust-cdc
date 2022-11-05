@@ -3,6 +3,7 @@ import "./App.css";
 import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import NotFound from "./Components/NotFound";
+import SubNavbar from "./Components/SubNavbar";
 import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
 import Contact from "./Pages/Contact";
@@ -11,10 +12,8 @@ import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div>
-      <div className="h-8 w-full bg-gradient-to-r from-primary to-blue-900">
-        {" "}
-      </div>
+    <div> 
+      <SubNavbar></SubNavbar>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
