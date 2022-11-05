@@ -45,7 +45,7 @@ li:hover {
   left: 50%;
   bottom: -4px;
   background-color: #1b1c41;
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.3s;
 }
 .different:hover::after {
   width: 100%;

@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Futura:ital,wght@0,300;0,400;1,500;1,700&display=swap");
 
 body {
   margin: 0;
   font-family: ubuntu;
+  font-family: Futura;
 }
 
 /* body {

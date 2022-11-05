@@ -96,18 +96,18 @@ const Navbar = () => {
               <li className="dropdown  cursor-pointer mx-6 different">
                 <Link to="/governingPanel">Governing Panel</Link>
                 <ul id="dropdown-1" className="border-1">
-                  <li className="nestedDropdown mt-2 hover:pb-16 different">
+                  <li className="nestedDropdown mt-2 hover:pb-16 ">
                     Fall 21 panel
-                    <ul className="dropdown-2 ml-32 mt-[-32px]">
-                      <li className="my-2 different">Executive Body</li>
-                      <li className="my-2 different">Sub-Executive Body</li>
+                    <ul className="dropdown-2 ">
+                      <li className="my-2 ">Executive Body</li>
+                      <li className="my-2 ">Sub-Executive Body</li>
                     </ul>
                   </li>
-                  <li className="nestedDropdown mt-2 pb-16 pt-4 different">
+                  <li className="nestedDropdown mt-2 pb-16 pt-4">
                     Spring 21 panel
                     <ul className="dropdown-2 ml-4">
-                      <li className="my-2 different">Executive Body</li>
-                      <li className="my-2 different">Sub-Executive Body</li>
+                      <li className="my-2 ">Executive Body</li>
+                      <li className="my-2 ">Sub-Executive Body</li>
                     </ul>
                   </li>
                 </ul>
