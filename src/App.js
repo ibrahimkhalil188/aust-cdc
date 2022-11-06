@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import About from "./Components/About";
-import Navbar from "./Components/Navbar";
-import NotFound from "./Components/NotFound";
-import SubNavbar from "./Components/SubNavbar";
+import About from "./Components/Home/About";
+import Navbar from "./Components/Shared/Navbar";
+import NotFound from "./Components/Shared/NotFound";
+import SubNavbar from "./Components/Shared/SubNavbar";
 import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
 import Contact from "./Pages/Contact";

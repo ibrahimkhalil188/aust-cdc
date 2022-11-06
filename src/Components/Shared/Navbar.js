@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
-import logo from "../Assets/Logo/austlogo.png";
-import "../Style/Navbar.style.css";
+import logo from "../../Assets/Logo/austlogo.png";
+import "../../Style/Navbar.style.css";
 const Navbar = () => {
   const [open,setOpen] = useState(false)
   const [headerColor, setHeaderColor] = useState("white");
@@ -86,7 +86,7 @@ const Navbar = () => {
       className="hidden lg:block">
         <nav
           id="navbar"
-          className="flex justify-between items-center h-[85px] my-2 p-4 text-xl text-primary font-bold"
+          className="flex justify-between items-center h-[60px] my-2 p-4 text-xl text-primary font-bold"
         >
           <div>
             <ul className="flex">
@@ -119,7 +119,7 @@ const Navbar = () => {
           </div>
           <div className="p-4">
             <img
-              className="h-20 hover:h-24 hover:ease-in-out duration-300 cursor-pointer"
+              className="h-[55px] hover:h-[70px] hover:ease-in-out duration-500 cursor-pointer"
               src={logo}
               alt="aust cdc logo"
             />

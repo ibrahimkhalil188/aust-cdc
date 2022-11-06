@@ -1,5 +1,5 @@
 import React from 'react';
-import whiteLogo from '../Assets/Logo/whiteLogo.png';
+import whiteLogo from '../../Assets/Logo/whiteLogo.png';
 const About = () => {
     return (
         <div>

@@ -1,11 +1,11 @@
 import React from 'react';
-import About from '../Components/About';
-import Affiliation from '../Components/Affiliation';
-import AustCdcPillers from '../Components/AustCdcPillers';
-import Event from '../Components/Event';
-import Footer from '../Components/Footer';
-import HeroSection from '../Components/HeroSection';
-import LatestNews from '../Components/LatestNews';
+import About from '../Components/Home/About';
+import Affiliation from '../Components/Home/Affiliation';
+import AustCdcPillers from '../Components/Home/AustCdcPillers';
+import Event from '../Components/Home/Event';
+import HeroSection from '../Components/Home/HeroSection';
+import LatestNews from '../Components/Home/LatestNews';
+import Footer from '../Components/Shared/Footer';
 
 const Home = () => {
     return (
