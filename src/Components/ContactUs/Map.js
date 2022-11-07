@@ -1,6 +1,6 @@
 import 'leaflet/dist/leaflet.css';
 import React from "react";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import "../../Style/icon.style.css";
 
 const Map = () => {
@@ -11,16 +11,14 @@ const Map = () => {
       <MapContainer
         center={{ lat: 23.7639, lng:  90.4066}}
         zoom={16}
-        style={{ height: "50vh", width: "100%" }}
+        style={{ height: "50vh", width: "50%" }}
         scrollWheelZoom={true}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker className="marker" position={[23.7639, 90.4066]}>
-          
-        </Marker>
+        
       </MapContainer>
     </div>
   );

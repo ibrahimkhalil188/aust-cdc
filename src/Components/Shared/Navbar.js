@@ -48,7 +48,7 @@ const Navbar = () => {
               <li className="nestedDropdown mt-2 hover:pb-16 ">
                 Fall 21 panel
                 <ul className="dropdown-2 ml-32 mt-[-32px]">
-                  <li className="my-2 ">Executive Body</li>
+                  <Link to="/executive" className="my-2 ">Executive Body</Link>
                   <li className="my-2 ">Sub-Executive Body</li>
                 </ul>
               </li>
@@ -99,7 +99,7 @@ const Navbar = () => {
                   <li className="nestedDropdown mt-2 hover:pb-16 ">
                     Fall 21 panel
                     <ul className="dropdown-2 ">
-                      <li className="my-2 ">Executive Body</li>
+                      <Link to="/executive" className="my-2 ">Executive Body</Link>
                       <li className="my-2 ">Sub-Executive Body</li>
                     </ul>
                   </li>

@@ -5,7 +5,6 @@ import AustCdcPillers from '../Components/Home/AustCdcPillers';
 import Event from '../Components/Home/Event';
 import HeroSection from '../Components/Home/HeroSection';
 import LatestNews from '../Components/Home/LatestNews';
-import Footer from '../Components/Shared/Footer';
 
 const Home = () => {
     return (
@@ -16,7 +15,7 @@ const Home = () => {
             <About></About>
             <LatestNews></LatestNews>
             <Affiliation></Affiliation>
-            <Footer></Footer>
+            
         </div>
     );
 };
