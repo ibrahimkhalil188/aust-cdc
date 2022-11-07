@@ -10,10 +10,10 @@ const SubNavbar = () => {
           <BsFacebook className="mx-2"></BsFacebook>
           <FaFacebookMessenger></FaFacebookMessenger>
           </div>
-          <div className="text-white">
-            <span>signin </span>
-            |
-            <span> signup</span>
+          <div className="text-white text-lg uppercase flex justify-center items-center space-x-2 tracking-wider cursor-pointer">
+            <h1>Sing in</h1>
+            <div className='w-1 bg-white h-4 mx-4'></div>
+            <h1>Sing up</h1>
           </div>
         </div>
       </div>

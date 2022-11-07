@@ -93,13 +93,13 @@ const Navbar = () => {
               <li className="mx-6 cursor-pointer different">
                 <Link to="/">Home</Link>
               </li>
-              <li className="dropdown  cursor-pointer mx-6 different">
-                <Link to="/governingPanel">Governing Panel</Link>
+              <li className="dropdown  cursor-pointer mx-6">
+                <li className="different">Governing Panel</li>
                 <ul id="dropdown-1" className="border-1">
-                  <li className="nestedDropdown mt-2 hover:pb-16 ">
+                  <li className="nestedDropdown child mt-2 hover:pb-16 ">
                     Fall 21 panel
                     <ul className="dropdown-2 ">
-                      <Link to="/executive" className="my-2 ">Executive Body</Link>
+                      <Link to="/executive" className="my-2 child">Executive Body</Link>
                       <li className="my-2 ">Sub-Executive Body</li>
                     </ul>
                   </li>
