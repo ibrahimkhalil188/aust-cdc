@@ -1,6 +1,6 @@
 import React from 'react';
 import whiteLogo from '../../Assets/Logo/whiteLogo.png';
-const About = () => {
+const AboutWithLogo = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-white">
@@ -16,4 +16,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AboutWithLogo;

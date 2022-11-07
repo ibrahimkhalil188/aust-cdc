@@ -1,5 +1,5 @@
 import React from 'react';
-import About from '../Components/Home/About';
+import About from '../Components/Home/AboutWithLogo';
 import Affiliation from '../Components/Home/Affiliation';
 import AustCdcPillers from '../Components/Home/AustCdcPillers';
 import Event from '../Components/Home/Event';
