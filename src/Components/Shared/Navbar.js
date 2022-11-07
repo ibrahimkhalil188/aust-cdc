@@ -113,7 +113,8 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="mx-4 cursor-pointer different">
-                <Link to="/clubStructure">Club Structure</Link>{" "}
+                {/* <Link to="/clubStructure">Club Structure</Link> */}
+                <Link to="/event">Event</Link>
               </li>
             </ul>
           </div>

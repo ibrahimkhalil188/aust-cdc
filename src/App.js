@@ -8,27 +8,26 @@ import About from "./Pages/About";
 import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
 import Contact from "./Pages/Contact";
+import Event from "./Pages/Event";
 import Executive from "./Pages/Executive";
 import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div> 
+    <div>
       <SubNavbar></SubNavbar>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
-        <Route
-          path="/executive"
-          element={<Executive></Executive>}
-        ></Route>
+        <Route path="/executive" element={<Executive></Executive>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route
           path="/clubStructure"
           element={<ClubStructure></ClubStructure>}
         ></Route>
+        <Route path="/event" element={<Event></Event>}></Route>
         <Route
           path="/captureCollection"
           element={<CaptureCollection></CaptureCollection>}
