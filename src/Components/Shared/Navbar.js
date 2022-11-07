@@ -113,7 +113,7 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="mx-4 cursor-pointer different">
-                <Link to="/clubStructure ">Club Structure</Link>{" "}
+                <Link to="/clubStructure">Club Structure</Link>{" "}
               </li>
             </ul>
           </div>
@@ -127,7 +127,7 @@ const Navbar = () => {
           <div>
             <ul className="flex">
               <li className="mx-4 cursor-pointer different">
-                <Link to="/captureCollection ">Capture Collections</Link>
+                <Link to="/captureCollection">Capture Collections</Link>
               </li>
               <li className="mx-4 cursor-pointer different">
                 <Link to="/about">About us</Link>
