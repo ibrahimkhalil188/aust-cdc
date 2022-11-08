@@ -1,54 +1,37 @@
-.navbar {
+#navbar li {
+  padding: 6px 14px;
+}
+#navbar li:hover {
+  background-color: #dc2626;
+  color: white;
+}
+.dropdown {
   position: relative;
-}
-.dropdown:hover #dropdown-1 {
-  position: absolute;
   display: block;
-  width: 260px;
-  border-radius: 2px;
-  padding: 8px;
-  font-size: 20px;
+  width: 180px;
   cursor: pointer;
 }
-.nestedDropdown:hover .dropdown-2 {
-  position: absolute;
-  display: block;
-  width: 220px;
-  border-radius: 2px;
-  padding: 4px 8px;
-  font-size: 20px;
-  cursor: pointer;
+.dropdown li:hover {
+  background-color: #dc2626;
+  transition: background-color 0.22s ease, color 0.22s ease;
 }
-#dropdown-1,
-.dropdown-2 {
-  background-color: white;
-  width: 200px;
+.dropdown-1 {
+  position: absolute;
   display: none;
-}
-
-li.different {
-  border: none;
-  position: relative;
-}
-.different:hover {
-  border: none;
-  color: #1e3a89;
-}
-li:hover {
-  border-bottom: 5px solid #ffffff;
-}
-
-.different::after {
-  content: "";
-  position: absolute;
-  width: 0px;
-  height: 2px;
-  left: 50%;
-  bottom: -4px;
-  background-color: #1e3a89;
-  transition: all ease-in-out 0.3s;
-}
-.different:hover::after {
+  margin-top: 4px;
+  margin-left: -14px;
   width: 100%;
-  left: 0;
+}
+.dropdown:hover .dropdown-1 {
+  display: block;
+}
+.dropdown-2 {
+  position: absolute;
+  width: 240px;
+  display: none;
+  left: 100%;
+  top: 0;
+}
+.dropdown-1:hover .dropdown-2 {
+  display: block;
 }
