@@ -11,6 +11,8 @@ import Contact from "./Pages/Contact";
 import Event from "./Pages/Event";
 import Executive from "./Pages/Executive";
 import Home from "./Pages/Home";
+import LogIn from "./Pages/LogIn";
+import Register from "./Pages/Register";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           path="/captureCollection"
           element={<CaptureCollection></CaptureCollection>}
         ></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/login" element={<LogIn></LogIn>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

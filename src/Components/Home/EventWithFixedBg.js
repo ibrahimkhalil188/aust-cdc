@@ -1,7 +1,7 @@
 import React from "react";
 import eventBg from "../../Assets/Images/eventBG-01.png";
 
-const Event = () => {
+const EventWithFixedBg = () => {
   return (
     <div>
       <div
@@ -41,4 +41,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default EventWithFixedBg;
