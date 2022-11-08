@@ -14,7 +14,7 @@ const SubNavbar = ({login,setLogin}) => {
           <div className="text-white text-lg uppercase flex justify-center items-center space-x-2 tracking-wider cursor-pointer">
             <Link to="/login">Sing in</Link>
             <div className='w-1 bg-white h-4 mx-4'></div>
-            <Link to="/login">Sing up</Link>
+            <Link to="/register">Sing up</Link>
           </div>
         </div>
       </div>
