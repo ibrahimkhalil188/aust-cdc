@@ -94,25 +94,25 @@ const Navbar = () => {
                 <li className="mx-6 cursor-pointer ">
                   <Link to="/">Home</Link>
                 </li>
-                <li className="dropdown cursor-pointer ">
-                  Governing Panel
+                <ul className="dropdown cursor-pointer ">
+                 <li> Governing Panel</li>
                   <ul className="dropdown-1 bg-primary text-white">
                     <li>
                       Fall 21 panel
-                      <ul className="dropdown-2">
+                      <ul className="dropdown-2 bg-primary">
                         <li><Link to="/executive" className="my-2">Executive Body</Link></li>
                         <li><Link to="/subExecutive" className="my-2 ">Sub-Executive Body</Link></li>
                       </ul>
                     </li>
                     <li>
                       Spring 21 panel
-                      <ul className="dropdown-2 bg-primary">
+                      <ul className="dropdown-3 bg-primary">
                       <li><Link to="/executive" className="my-2">Executive Body</Link></li>
                         <li><Link to="/subExecutive" className="my-2 ">Sub-Executive Body</Link></li>
                       </ul>
                     </li>
                   </ul>
-                </li>
+                </ul>
                 <li className="mx-4 cursor-pointer ">
                   {/* <Link to="/clubStructure">Club Structure</Link> */}
                   <Link to="/event">Event</Link>
