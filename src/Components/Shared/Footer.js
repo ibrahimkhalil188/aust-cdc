@@ -1,9 +1,8 @@
 import React from "react";
-import { FaFacebookMessenger, FaFacebookSquare,FaInstagramSquare } from "react-icons/fa";
 import { AiFillLinkedin } from "react-icons/ai";
-import { MdEmail } from "react-icons/md";
+import { FaFacebookMessenger, FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { MdEmail } from "react-icons/md";
 import {
   default as austCdcLogo,
   default as austLogo
@@ -15,7 +14,7 @@ const Footer = () => {
       <footer className="footer p-10 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29] text-white">
         <div>
           <div>
-            <div className="flex">
+            <div className="lg:flex">
               <img className="w-48 mr-4 h-24" src={austLogo} alt="" />
               <img className="w-48 h-24" src={austCdcLogo} alt="" />
             </div>
@@ -23,8 +22,8 @@ const Footer = () => {
               <h1 className="text-2xl uppercase">
                 aust career development club
               </h1>
-              <hr className="w-[440px]"></hr>
-              <p className="w-[400px]">
+              <hr className="lg:w-[440px]"></hr>
+              <p className="lg:w-[400px]">
               Aust Career Development Club is a platform where we empower future leaders and flourish the skills needed for upcoming employability, the students enrich their knowledge about career prospects and professional etiqu
               </p>
             </div>

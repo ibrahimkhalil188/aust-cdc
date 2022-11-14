@@ -1,6 +1,6 @@
 import React from "react";
 import whiteLogo from '../../Assets/Logo/whiteLogo.png';
-import "../../Style/Card.style.css"
+import "../../Style/Card.style.css";
 const Affiliation = () => {
   const affiliation = [
     {
@@ -68,8 +68,8 @@ const Affiliation = () => {
   return (
     <div>
       <h1 className="text-4xl text-center uppercase text-primary font-bold mt-24">austcdc  <span className="text-secondary ml-2"> affiliation</span></h1>
-      <div className="ml-[503px]"><hr className="bg-primary h-1 w-[410px]"></hr></div>
-      <div className="grid grid-cols-5 gap-5 mx-24 mt-16">
+      <div className="lg:ml-[503px]"><hr className="bg-primary h-1 w-[410px]"></hr></div>
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 mx-6 lg:mx-24 mt-16">
         {affiliation.map((a) => (
           <div className="h-48 w-48 shadow-xl flex justify-center items-center card"><img className="w-[120px]" src={a.image}></img></div>
         ))}

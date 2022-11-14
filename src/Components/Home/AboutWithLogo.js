@@ -2,7 +2,7 @@ import React from 'react';
 import whiteLogo from '../../Assets/Logo/whiteLogo.png';
 const AboutWithLogo = () => {
     return (
-        <div className='mx-24 mt-24'>
+        <div className='lg:mx-24 mt-24'>
             <div className="hero min-h-screen bg-white">
                 <div className="hero-content flex-col lg:flex-row justify-between">
                     <img src={whiteLogo} alt="" className="w-[310px] lg:max-w-sm rounded-lg shadow-2xl" />

@@ -34,7 +34,7 @@ const AustCdcPillers = () => {
   return (
     <div>
         <h1 className="text-center text-5xl mt-24 font-semibold"><span className="text-primary">AUSTCDC</span> <span className="text-red-600">MOTO</span></h1>
-        <div className="ml-[503px]"><hr className="bg-primary h-1 w-[410px]"></hr></div>
+        <div className="lg:ml-[503px]"><hr className="bg-primary h-1 w-[410px] "></hr></div>
       <div className="lg:flex justify-around items-center mt-16">
       {pipeline.map((singlePipeline) => (
         <PillerCard pipeline={singlePipeline} key={singlePipeline.id}></PillerCard>
