@@ -23,12 +23,23 @@
   display: block;
 }
 .dropdown-2 {
-  position: absolute; 
+  position: absolute;
   display: none;
   width: 180px;
   left: 100%;
   top: 0;
 }
-.dropdown-1:hover .dropdown-2 {
+
+.dropdown-3 {
+  position: absolute;
+  display: none;
+  width: 180px;
+  left: 100%;
+  top: 60px;
+}
+.fall21:hover .dropdown-2 {
+  display: block;
+}
+.spring21:hover .dropdown-3 {
   display: block;
 }
