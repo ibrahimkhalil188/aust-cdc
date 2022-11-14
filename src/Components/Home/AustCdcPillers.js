@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import anticipate1 from "../../Assets/Logo/anticipate_white.png"
-import anticipate2 from "../../Assets/Logo/anticipate_red.png"
-import Adapt1 from "../../Assets/Logo/adapt_white.png"
-import Adapt2 from "../../Assets/Logo/adapt_red.png"
-import Accelerate1 from "../../Assets/Logo/accerate_white.png"
-import Accelerate2 from "../../Assets/Logo/accerate_red.png"
+import React from "react";
+import Accelerate2 from "../../Assets/Logo/accerate_red.png";
+import Accelerate1 from "../../Assets/Logo/accerate_white.png";
+import Adapt2 from "../../Assets/Logo/adapt_red.png";
+import Adapt1 from "../../Assets/Logo/adapt_white.png";
+import anticipate2 from "../../Assets/Logo/anticipate_red.png";
+import anticipate1 from "../../Assets/Logo/anticipate_white.png";
+import PillerCard from "./PilllerCard";
 
 const AustCdcPillers = () => {
-  const [hover,setHover]= useState(true);
   const pipeline = [
     {
       id: 1,
@@ -31,31 +31,13 @@ const AustCdcPillers = () => {
       ime2:Accelerate2,
     },
   ];
-  const x =()=>{
-    console.log("hi")
-  }
-  console.log(hover);
   return (
     <div>
         <h1 className="text-center text-5xl mt-24 font-semibold"><span className="text-primary">AUSTCDC</span> <span className="text-red-600">MOTO</span></h1>
         <div className="ml-[503px]"><hr className="bg-primary h-1 w-[410px]"></hr></div>
       <div className="lg:flex justify-around items-center mt-16">
-      {pipeline.map((e) => (
-        <div key={e.id}>
-          <div className="card h-[520px] w-96 bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-              <div className="avatar">
-                <div className="w-32 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2" onMouseOver={()=>setHover(false)} onMouseLeave={()=>setHover(true)}>
-                  <img src={`${hover?e.ime1:e.ime2}`} />
-                </div>
-              </div>
-            </figure>
-            <div className="card-body items-center text-center">
-              <h2 className="card-title uppercase text-primary text-2xl">{e.name}</h2>
-              <p className="text-lg">{e.des}</p>
-            </div>
-          </div>
-        </div>
+      {pipeline.map((singlePipeline) => (
+        <PillerCard pipeline={singlePipeline} key={singlePipeline.id}></PillerCard>
       ))}
       </div>
     </div>
