@@ -4,8 +4,13 @@ import eventBg from "../../Assets/Images/eventBG-01.png";
 const EventWithFixedBg = () => {
   return (
     <div>
+     < div className=" flex items-center flex-col">
+          <h1 className="text-6xl mt-6 text-secondary">EVENTS</h1>
+          <div className="ml-[10px]"><div className="bg-primary h-1 w-[210px]"></div></div>
+         {/*  <div className=" h-1 w-48 bg-white"></div> */}
+        </div>
       <div
-        className="relative my-24"
+        className="relative mt-12"
         style={{
           backgroundImage: `url(${eventBg})`,
           backgroundRepeat: "no-repeat",
@@ -14,10 +19,7 @@ const EventWithFixedBg = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className=" flex items-center flex-col">
-          <h1 className="text-6xl text-white border-b-2 mt-6">EVENTS</h1>
-         {/*  <div className=" h-1 w-48 bg-white"></div> */}
-        </div>
+        
         <div className="hero min-h-screen">
           <div className="hero-content flex-col lg:flex-row">
             <img

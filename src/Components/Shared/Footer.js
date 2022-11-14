@@ -1,4 +1,9 @@
 import React from "react";
+import { FaFacebookMessenger, FaFacebookSquare,FaInstagramSquare } from "react-icons/fa";
+import { AiFillLinkedin } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
+import { IoLogoYoutube } from "react-icons/io";
+import { Link } from "react-router-dom";
 import {
   default as austCdcLogo,
   default as austLogo
@@ -7,7 +12,7 @@ import SubFooter from "./SubFooter";
 const Footer = () => {
   return (
     <div className="mt-12">
-      <footer className="footer p-10 bg-primary text-white">
+      <footer className="footer p-10 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29] text-white">
         <div>
           <div>
             <div className="flex">
@@ -20,12 +25,25 @@ const Footer = () => {
               </h1>
               <hr className="w-[440px]"></hr>
               <p className="w-[400px]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Distinctio adipisci aperiam laboriosam, minus libero officiis,
-                itaque nobis corporis esse architecto mollitia deserunt dicta
-                sint unde sequi voluptatem sapiente recusandae. Culpa?
+              Aust Career Development Club is a platform where we empower future leaders and flourish the skills needed for upcoming employability, the students enrich their knowledge about career prospects and professional etiqu
               </p>
             </div>
+            <div className="mt-6">
+            <h1 className="text-2xl uppercase">
+                social media
+              </h1>
+              <hr className="w-[200px]"></hr>
+          <div className="flex items-center  justify-start mt-2 text-3xl text-white">  
+            <a href="https://www.facebook.com/" target="blank"><FaFacebookSquare className="mx-1 text-md ml-4 hover:scale-125"></FaFacebookSquare></a>
+            <a href="https://www.facebook.com/" target="blank"> <FaFacebookMessenger className="mx-1 text-md  hover:scale-125"></FaFacebookMessenger></a>
+            <a href="https://www.facebook.com/" target="blank"><AiFillLinkedin className="mx-1 text-md hover:scale-125"></AiFillLinkedin></a>
+            <a href="https://www.facebook.com/" target="blank"><MdEmail className="mx-1 text-md  hover:scale-125"></MdEmail></a>
+            <a href="https://www.facebook.com/" target="blank"><FaInstagramSquare className="mx-1 text-md  hover:scale-125"></FaInstagramSquare></a>
+            <a href="https://www.facebook.com/" target="blank"><IoLogoYoutube className="mx-1 text-md  hover:scale-125"></IoLogoYoutube></a>
+          </div>
+        </div>
+
+
           </div>
           <div></div>
         </div>
@@ -50,6 +68,7 @@ const Footer = () => {
             
           </div>
         </div>
+        
       </footer>
       <hr></hr>
       <SubFooter></SubFooter>

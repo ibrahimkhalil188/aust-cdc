@@ -1,9 +1,11 @@
 import React from "react";
-
+import whiteLogo from '../../Assets/Logo/whiteLogo.png';
+import "../../Style/Card.style.css"
 const Affiliation = () => {
   const affiliation = [
     {
       id: "1",
+      image:whiteLogo
     },
     {
       id: "2",
@@ -65,10 +67,11 @@ const Affiliation = () => {
   ];
   return (
     <div>
-      <h1 className="text-4xl text-center uppercase text-primary font-bold">austcdc affiliation</h1>
-      <div className="grid grid-cols-5 gap-5 mx-24">
+      <h1 className="text-4xl text-center uppercase text-primary font-bold mt-24">austcdc  <span className="text-secondary ml-2"> affiliation</span></h1>
+      <div className="ml-[503px]"><hr className="bg-primary h-1 w-[410px]"></hr></div>
+      <div className="grid grid-cols-5 gap-5 mx-24 mt-16">
         {affiliation.map((a) => (
-          <div className="h-48 w-48 shadow-xl flex justify-center items-center">Hi</div>
+          <div className="h-48 w-48 shadow-xl flex justify-center items-center card"><img className="w-[120px]" src={a.image}></img></div>
         ))}
       </div>
     </div>

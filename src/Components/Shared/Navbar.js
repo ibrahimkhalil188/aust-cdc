@@ -87,55 +87,54 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <nav
             id="navbar"
-            className="flex justify-between items-center h-[60px] my-2 p-4 text-xl text-primary font-bold"
+            className="flex justify-between mx-24 items-center h-[50px] my-2 p-4 text-lg font-semibold text-primary"
           >
             <div>
               <ul className="flex items-center">
-                <li className="mx-6 cursor-pointer ">
+                <li className="cursor-pointer ">
                   <Link to="/">Home</Link>
                 </li>
                 <ul className="dropdown cursor-pointer ">
                  <li> Governing Panel</li>
-                  <ul className="dropdown-1 bg-primary text-white">
+                  <ul className="dropdown-1 text-sm text-primary bg-white">
                     <li>
                       Fall 21 panel
-                      <ul className="dropdown-2 bg-primary">
+                      <ul className="dropdown-2 bg-white text-primary">
                         <li><Link to="/executive" className="my-2">Executive Body</Link></li>
                         <li><Link to="/subExecutive" className="my-2 ">Sub-Executive Body</Link></li>
                       </ul>
                     </li>
                     <li>
                       Spring 21 panel
-                      <ul className="dropdown-3 bg-primary">
+                      <ul className="dropdown-2 bg-white text-primary">
                       <li><Link to="/executive" className="my-2">Executive Body</Link></li>
                         <li><Link to="/subExecutive" className="my-2 ">Sub-Executive Body</Link></li>
                       </ul>
                     </li>
                   </ul>
                 </ul>
-                <li className="mx-4 cursor-pointer ">
-                  {/* <Link to="/clubStructure">Club Structure</Link> */}
-                  <Link to="/event">Event</Link>
+                <li className="cursor-pointer">
+                  <Link to="/about">About us</Link>
+                
                 </li>
               </ul>
             </div>
-            <div className="p-4">
+            <div className="p-4 mx-12">
               <img
-                className="h-[55px] hover:h-[70px] hover:ease-in-out duration-500 cursor-pointer"
+                className="h-[55px] hover:h-[50px] hover:ease-in-out duration-100 cursor-pointer"
                 src={logo}
                 alt="aust cdc logo"
               />
             </div>
-            <div>
-              <ul className="flex">
-                <li className="mx-4 cursor-pointer ">
-                  <Link to="/captureCollection">Capture Collections</Link>
+            <div className="">
+              <ul className="flex items-center">
+                <li className="cursor-pointer ">
+                  <Link to="/captureCollection">Preeminenece gallery</Link>
                 </li>
-                <li className="mx-4 cursor-pointer ">
-                  <Link to="/about">About us</Link>
-                </li>
-                <li className="mx-4  cursor-pointer ">
-                  <Link to="contact">Contact us</Link>
+               <li> <Link to="/event">Event</Link></li>
+                
+                <li className=" cursor-pointer ">
+                  <Link to="contact">Contact Info</Link>
                 </li>
               </ul>
             </div>
