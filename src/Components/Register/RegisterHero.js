@@ -1,18 +1,58 @@
 import React from "react";
-import heroImage from '../../Assets/Images/Sample-picture-01.png';
-const RegisterHero = () => {
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "../../Style/slider.style.css";
+
+// import required modules
+import { Autoplay, Navigation, Pagination } from "swiper";
+
+import { Link } from "react-router-dom";
+import image1 from "../../Assets/Images/regis_one.png";
+import image2 from "../../Assets/Images/regis_three.png";
+import image3 from "../../Assets/Images/regis_two.png";
+const RegisterSlider = () => {
   return (
-    <div className="hero" style={{ backgroundImage: `url(${heroImage})`,backgroundPosition: 'center',backgroundSize: '100% 100%',
-    backgroundRepeat: 'no-repeat', height:"40vh" }}>
-  <div className=""></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div>
-    <h1 className="mt-[-30px] mb-8 text-8xl font-bold"><span className="text-white">CAREER THAT</span> <span className="text-red-600">MATTER</span></h1>
-      <button  className=" hover:bg-red-600 bg-red-600 hover:border-red-600 border-red-600 text-4xl px-12 py-2 rounded-lg text-white">REGISTER</button>
-    </div>
-  </div>
-</div>
+    <>
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper h-[85vh] relative"
+      >
+        <SwiperSlide>
+          <img className="w-full object-fill" src={image1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="w-full object-fill" src={image2} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="w-full object-fill" src={image3} alt="" />
+        </SwiperSlide>
+      </Swiper>
+      <div className="absolute top-[38%] left-8 z-10">
+        <h1 className="text-[90px] font-bold uppercase">
+          <span className="text-white">Join the League of </span>{" "}
+          <span className="text-secondary">Leaders</span>
+        </h1>
+        <button className="hover:bg-white hover:text-secondary hover:scale-105 bg-secondary text-xl font-bold px-8 py-3 mt-2 rounded-lg text-white ml-[40%]">
+          <Link to="/register">REGISTER NOW</Link>
+        </button>
+      </div>
+    </>
   );
 };
 
-export default RegisterHero;
+export default RegisterSlider;

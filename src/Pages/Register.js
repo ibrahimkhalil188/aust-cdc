@@ -1,12 +1,12 @@
 import React from 'react';
 import GmailRegister from '../Components/Register/GmailRegister';
-import RegisterHero from '../Components/Register/RegisterHero';
+import RegisterSlider from '../Components/Register/RegisterHero';
 import RegisterInstruction from '../Components/Register/RegisterInstruction';
 
 const Register = () => {
     return (
         <div>
-            <RegisterHero></RegisterHero>
+            <RegisterSlider></RegisterSlider>
             <RegisterInstruction></RegisterInstruction>
             <GmailRegister></GmailRegister>
         </div>

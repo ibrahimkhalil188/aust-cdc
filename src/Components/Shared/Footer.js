@@ -67,7 +67,9 @@ const Footer = () => {
         </div>
         
       </footer>
-      <hr></hr>
+      <div className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
+        <div className="bg-white h-[0.2px] mx-48"></div>
+      </div>
       <SubFooter></SubFooter>
     </div>
   );
