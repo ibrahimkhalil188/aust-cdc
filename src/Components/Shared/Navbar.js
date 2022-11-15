@@ -87,7 +87,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <nav
             id="navbar"
-            className="flex justify-between mx-24 items-center h-[50px] my-2 p-4 text-lg font-semibold text-primary"
+            className="flex justify-between mx-24 items-center h-[60px] my-2 p-4 text-lg font-semibold text-primary"
           >
             <div>
               <ul className="flex items-center">

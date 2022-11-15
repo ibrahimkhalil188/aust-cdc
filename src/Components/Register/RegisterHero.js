@@ -30,7 +30,7 @@ const RegisterSlider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper h-[85vh] relative"
+        className="mySwiper relative"
       >
         <SwiperSlide>
           <img className="w-full object-fill" src={image1} alt="" />
@@ -42,12 +42,12 @@ const RegisterSlider = () => {
           <img className="w-full object-fill" src={image3} alt="" />
         </SwiperSlide>
       </Swiper>
-      <div className="absolute top-[38%] left-8 z-10">
-        <h1 className="text-[90px] font-bold uppercase">
+      <div className="absolute top-20 lg:top-[38%] left-8 z-10">
+        <h1 className="text-2xl lg:text-[90px] font-bold uppercase">
           <span className="text-white">Join the League of </span>{" "}
           <span className="text-secondary">Leaders</span>
         </h1>
-        <button className="hover:bg-white hover:text-secondary hover:scale-105 bg-secondary text-xl font-bold px-8 py-3 mt-2 rounded-lg text-white ml-[40%]">
+        <button className="hover:bg-white hover:text-secondary hover:scale-105 bg-secondary text-md lg:text-xl font-bold lg:px-8 px-4 py-3 mt-2 lg:mt-12 rounded-lg text-white ml-[25%] lg:ml-[40%]">
           <Link to="/register">REGISTER NOW</Link>
         </button>
       </div>

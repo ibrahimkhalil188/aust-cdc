@@ -29,7 +29,7 @@ const Slider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper h-[85vh] relative"
+        className="mySwiper lg:h-[85vh] relative"
       >
         <SwiperSlide>
           <img className="w-full object-fill" src={image1} alt="" />

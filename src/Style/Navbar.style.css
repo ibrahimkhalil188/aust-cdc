@@ -1,8 +1,8 @@
 #navbar li {
-  padding: 20px 14px;
+  padding: 25px 14px;
 }
 #navbar li:hover {
-  background-color: #dc2626;
+  background-color: #e62b36;
   color: white;
 }
 .dropdown {
@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 .dropdown li:hover {
-  background-color: #dc2626;
+  background-color: #e62b36;
   transition: background-color 0.22s ease, color 0.22s ease;
 }
 .dropdown-1 {
