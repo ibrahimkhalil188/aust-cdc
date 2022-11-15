@@ -3,10 +3,8 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { FaFacebookMessenger, FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import {
-  default as austCdcLogo,
-  default as austLogo
-} from "../../Assets/Logo/whiteLogo.png";
+import austLogo from "../../Assets/Images/aust_logo.svg";
+import austcdc from "../../Assets/Logo/cdc_footertwo.png";
 import SubFooter from "./SubFooter";
 const Footer = () => {
   return (
@@ -15,8 +13,8 @@ const Footer = () => {
         <div>
           <div>
             <div className="lg:flex">
-              <img className="w-48 mr-4 h-24" src={austLogo} alt="" />
-              <img className="w-48 h-24" src={austCdcLogo} alt="" />
+              <img className="w-[150px] mr-4 " src={austLogo} alt="" />
+              <img className="w-[146px] " src={austcdc} alt="" />
             </div>
             <div className="mt-6">
               <h1 className="text-2xl uppercase">
@@ -32,13 +30,13 @@ const Footer = () => {
                 social media
               </h1>
               <hr className="w-[200px]"></hr>
-          <div className="flex items-center  justify-start mt-2 text-3xl text-white">  
-            <a href="https://www.facebook.com/" target="blank"><FaFacebookSquare className="mx-1 text-md ml-4 hover:scale-125"></FaFacebookSquare></a>
-            <a href="https://www.facebook.com/" target="blank"> <FaFacebookMessenger className="mx-1 text-md  hover:scale-125"></FaFacebookMessenger></a>
-            <a href="https://www.facebook.com/" target="blank"><AiFillLinkedin className="mx-1 text-md hover:scale-125"></AiFillLinkedin></a>
-            <a href="https://www.facebook.com/" target="blank"><MdEmail className="mx-1 text-md  hover:scale-125"></MdEmail></a>
-            <a href="https://www.facebook.com/" target="blank"><FaInstagramSquare className="mx-1 text-md  hover:scale-125"></FaInstagramSquare></a>
-            <a href="https://www.facebook.com/" target="blank"><IoLogoYoutube className="mx-1 text-md  hover:scale-125"></IoLogoYoutube></a>
+          <div className="flex items-center  justify-start mt-2 text-white">  
+            <a href="https://www.facebook.com/" target="blank"><FaFacebookSquare className="h-8 w-8 hover:scale-125"></FaFacebookSquare></a>
+            <a href="https://www.facebook.com/" target="blank"> <FaFacebookMessenger className="mx-1 h-[34px] w-[34px]  hover:scale-125"></FaFacebookMessenger></a>
+            <a href="https://www.facebook.com/" target="blank"><AiFillLinkedin className="mx-1 h-[34px] w-[34px] hover:scale-125"></AiFillLinkedin></a>
+            <a href="https://www.facebook.com/" target="blank"><MdEmail className="mx-1 h-[38px] w-[36px]  hover:scale-125"></MdEmail></a>
+            <a href="https://www.facebook.com/" target="blank"><FaInstagramSquare className="mx-1 h-8 w-8  hover:scale-125"></FaInstagramSquare></a>
+            <a href="https://www.facebook.com/" target="blank"><IoLogoYoutube className="mx-1  h-[34px] w-[34px] hover:scale-125"></IoLogoYoutube></a>
           </div>
         </div>
 

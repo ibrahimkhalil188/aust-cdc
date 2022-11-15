@@ -14,7 +14,7 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 import image1 from "../../Assets/Images/slider_one-01.png";
 import image3 from "../../Assets/Images/slider_three-01.png";
 import image2 from "../../Assets/Images/slider_two-01.png";
-const Slider = () => {
+const ContactSlider = () => {
   return (
     <>
       <Swiper
@@ -45,4 +45,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default ContactSlider;

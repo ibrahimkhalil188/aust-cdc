@@ -10,7 +10,7 @@ const EventWithFixedBg = () => {
         style={{
           backgroundImage: `url(${austbg})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           }}
         

@@ -21,7 +21,7 @@ const Navbar = () => {
         top: "0",
         backgroundColor: headerColor,
         padding: "1px",
-        zIndex: "10",
+        zIndex: "100",
       }}
     >
       <div>
