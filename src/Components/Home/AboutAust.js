@@ -19,11 +19,11 @@ const EventWithFixedBg = () => {
           <div className="hero-content flex-col lg:flex-row">
             
             <div className="mt-48">
-              <h1 className="text-6xl text-white mx-16 font-bold border-secondary mt-[-200px]">
+              <h1 className="text-4xl lg:text-6xl text-white mx-16 font-bold border-secondary mt-[-200px]">
                 About AUST
               </h1>
-              <div className="lg:ml-[50px]"><div className="bg-secondary h-1 lg:w-[410px]"></div></div>
-              <p className="py-6 mx-16 text-white text-xl font-sans ">
+              <div className="ml-[50px]"><div className="bg-secondary h-1 w-[220px] lg:w-[410px]"></div></div>
+              <p className="py-6 mx-2 text-justify lg:mx-16 text-white text-xl font-sans ">
               The Ahsanullah University of Science and Technology (AUST) was founded by the Dhaka Ahsania Mission in 1995. Dhaka Ahsania Mission is a non-profit voluntary organization in Bangladesh. The Mission was established in 1958 by Khan Bahadur Ahsanullah, an outstanding educationist and social reformer of undivided India. With his own vision of a better society, characterized by a wealth of moral and spiritual values of the highest humanism that are universally acclaimed through ages and manifested in every sphere of life social, economic and cultural; and access to education and resources, he established the Mission. His remarkable educational reforms include among others introduction of roll number system in the public examination and creating equal opportunity for education of all groups of people in the society.
 
 Besides, he has contributed to the society by writing a large number of books covering a wide range of areas from human and social life, history, human development, literature, religion, biography, moral values etc.
