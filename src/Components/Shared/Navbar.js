@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import logo from "../../Assets/Logo/austlogo.png";
 import "../../Style/Navbar.style.css";
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [headerColor, setHeaderColor] = useState("white");
   const listenScrollEvent = () => {
     window.scrollY > 20 ? setHeaderColor("white") : setHeaderColor("");
@@ -30,54 +30,69 @@ const Navbar = () => {
     */}
 
         <nav className="lg:hidden md:hidden">
-          <div className="flex justify-around items-center">
-            <div>Logo</div>
+          <div className="flex justify-between items-center mx-6">
             <div>
-              <h1 onClick={() => setOpen(!open)}>{open ? "Close" : "Open"}</h1>
+              <img className="w-32" src={logo} alt="" />
+            </div>
+            <div>
+              <h1 onClick={() => setOpen(!open)}>{!open ? <AiOutlineMenu className="text-4xl text-primary"></AiOutlineMenu> : <AiOutlineClose className="text-4xl text-secondary"></AiOutlineClose>}</h1>
             </div>
           </div>
-          {open ? (
-            <ul className="my-2 p-4 text-xl text-primary">
-              <li className="mx-4 cursor-pointer">
+          <div className={`${!open?"hidden":"block"} absolute right-0 bg-white w-full px-4`}>
+          <ul className="flex flex-col text-lg font-bold">
+              <li className="my-2 my-2cursor-pointer ">
                 <Link to="/">Home</Link>
               </li>
-              <li className="dropdown mx-4 cursor-pointer ">
-                <Link to="/governingPanel">Governing Panel</Link>
-                <ul id="dropdown-1" className="border-1">
-                  <li className="nestedDropdown mt-2 hover:pb-16 ">
+              <ul className="dropdown cursor-pointer ">
+                <li> Governing Panel</li>
+                <ul className="dropdown-1 text-sm text-primary bg-white">
+                  <li className="my-2 w-1/2 fall21">
                     Fall 21 panel
-                    <ul className="dropdown-2 ml-32 mt-[-32px]">
-                      <Link to="/executive" className="my-2 ">
-                        Executive Body
-                      </Link>
-                      <li className="my-2 ">Sub-Executive Body</li>
+                    <ul className="dropdown-2 ml-[-200px] bg-white text-primary">
+                      <li className="mt-2 my-2">
+                        <Link to="/executive" className="my-2">
+                          Executive Body
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/subExecutive" className="my-2 ">
+                          Sub-Executive Body
+                        </Link>
+                      </li>
                     </ul>
                   </li>
-                  <li className="nestedDropdown mt-2 pb-16 pt-4 ">
+                  <li className="my-2 w-1/2 spring21">
                     Spring 21 panel
-                    <ul className="dropdown-2 ml-4">
-                      <li className="my-2 ">Executive Body</li>
-                      <li className="my-2 ">Sub-Executive Body</li>
+                    <ul className="dropdown-3 ml-[-180px] bg-white text-primary">
+                      <li className="mt-[-20px] my-2">
+                        <Link to="/executive" className="my-2">
+                          Executive Body
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/subExecutive" className="my-2 ">
+                          Sub-Executive Body
+                        </Link>
+                      </li>
                     </ul>
                   </li>
                 </ul>
-              </li>
-              <li className="mx-4 cursor-pointer ">
-                <Link to="/clubStructure ">Club Structure</Link>{" "}
-              </li>
-              <li className="mx-4 cursor-pointer ">
-                <Link to="/captureCollection ">Capture Collections</Link>
-              </li>
-              <li className="mx-4 cursor-pointer">
+              </ul>
+              <li className="my-2 cursor-pointer">
                 <Link to="/about">About us</Link>
               </li>
-              <li className="mx-4  cursor-pointer">
-                <Link to="contact">Contact us</Link>
+              <li className="my-2 cursor-pointer ">
+                <Link to="/captureCollection">Preeminenece gallery</Link>
+              </li>
+              <li>
+                {" "}
+                <Link to="/event">Event</Link>
+              </li>
+              <li className="my-2  cursor-pointer ">
+                <Link to="contact">Contact Info</Link>
               </li>
             </ul>
-          ) : (
-            ""
-          )}
+          </div>
         </nav>
 
         {/*
@@ -91,31 +106,46 @@ const Navbar = () => {
           >
             <div>
               <ul className="flex items-center">
-                <li className="cursor-pointer ">
+                <li className="my-2 cursor-pointer ">
                   <Link to="/">Home</Link>
                 </li>
                 <ul className="dropdown cursor-pointer ">
-                 <li> Governing Panel</li>
+                  <li> Governing Panel</li>
                   <ul className="dropdown-1 text-sm text-primary bg-white">
-                    <li className="fall21">
+                    <li className="my-2 fall21">
                       Fall 21 panel
                       <ul className="dropdown-2 bg-white text-primary">
-                        <li><Link to="/executive" className="my-2">Executive Body</Link></li>
-                        <li><Link to="/subExecutive" className="my-2 ">Sub-Executive Body</Link></li>
+                        <li>
+                          <Link to="/executive" className="my-2">
+                            Executive Body
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/subExecutive" className="my-2 ">
+                            Sub-Executive Body
+                          </Link>
+                        </li>
                       </ul>
                     </li>
-                    <li className="spring21">
+                    <li className="my-2 spring21">
                       Spring 21 panel
                       <ul className="dropdown-3 bg-white text-primary">
-                      <li><Link to="/executive" className="my-2">Executive Body</Link></li>
-                        <li><Link to="/subExecutive" className="my-2 ">Sub-Executive Body</Link></li>
+                        <li>
+                          <Link to="/executive" className="my-2">
+                            Executive Body
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/subExecutive" className="my-2 ">
+                            Sub-Executive Body
+                          </Link>
+                        </li>
                       </ul>
                     </li>
                   </ul>
                 </ul>
-                <li className="cursor-pointer">
+                <li className="my-2 cursor-pointer">
                   <Link to="/about">About us</Link>
-                
                 </li>
               </ul>
             </div>
@@ -128,12 +158,15 @@ const Navbar = () => {
             </div>
             <div className="">
               <ul className="flex items-center">
-                <li className="cursor-pointer ">
+                <li className="my-2 cursor-pointer ">
                   <Link to="/captureCollection">Preeminenece gallery</Link>
                 </li>
-               <li> <Link to="/event">Event</Link></li>
-                
-                <li className=" cursor-pointer ">
+                <li>
+                  {" "}
+                  <Link to="/event">Event</Link>
+                </li>
+
+                <li className="my-2  cursor-pointer ">
                   <Link to="contact">Contact Info</Link>
                 </li>
               </ul>

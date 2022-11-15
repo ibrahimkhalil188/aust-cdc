@@ -70,13 +70,13 @@ const Affiliation = () => {
     <div>
       <div className="flex justify-center items-center">
       <div>
-      <h1 className="text-4xl uppercase text-primary font-bold mt-24">austcdc  <span className="text-secondary ml-2"> affiliation</span></h1>
-      <div className="bg-primary h-1 w-[410px]"></div>
+      <h1 className="text-3xl lg:text-4xl uppercase text-primary text-center font-bold mt-24">austcdc  <span className="text-secondary ml-2"> affiliation</span></h1>
+      <div className="bg-primary h-1 w-[340px] lg:w-[410px]"></div>
       </div>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 mx-6 lg:mx-24 mt-16">
         {affiliation.map((a) => (
-          <div className="h-48 w-48 shadow-xl flex justify-center items-center card"><img className="w-[120px]" src={a.image} alt=""/></div>
+          <div className="h-36 w-36 lg:h-48 lg:w-48 shadow-xl flex justify-center items-center card"><img className="w-[90px] lg:w-[120px]" src={a.image} alt=""/></div>
         ))}
       </div>
     </div>

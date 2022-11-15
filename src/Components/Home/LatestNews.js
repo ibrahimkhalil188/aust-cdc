@@ -57,22 +57,28 @@ const LatestNews = () => {
         {
           news.map(singleNews=><SwiperSlide>
             <div className="hero min-h-screen">
-              <div className="hero-content flex-col lg:flex-row">
-                
+              <div className="hero-content flex-col-reverse lg:flex-row">
                 <div>
                   <div>
-                  <h1 className="text-6xl mx-16 font-bold border-secondary mt-[-200px] uppercase text-start">
+                  <h1 className="text-4xl lg:text-6xl mx-16 font-bold border-secondary mt-16 lg:mt-[-200px] uppercase text-start">
                    {singleNews.title}
                   </h1>
-                  <div className="bg-secondary ml-16 h-1 w-[370px]"></div>
+                  <div className="bg-secondary ml-12 lg:ml-16 h-1 w-[250px] lg:w-[370px]"></div>
                   </div>
                   <p className="py-6 mx-16 text-justify">
                     {singleNews.des}
                   </p>
                 </div>
-                <img style={{width:"450px"}}
+                <div className="hidden lg:block">
+                <img style={{width:"650px"}}
+                  src={singleNews.image} alt=""
+                /></div>
+                <div className="lg:hidden block">
+                <img style={{width:"250px"}}
                   src={singleNews.image} alt=""
                 />
+                </div>
+                
               </div>
             </div>
             </SwiperSlide>)
