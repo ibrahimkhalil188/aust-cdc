@@ -5,7 +5,7 @@ const PillerCard = ({pipeline}) => {
     const [hover,setHover]= useState(true);
     return (
         
-        <div className="card h-[520px] w-96 bg-base-100 shadow-xl" onMouseOver={()=>setHover(false)} onMouseLeave={()=>setHover(true)}>
+        <div className="card h-[520px] mt-6 lg:mt-0 lg:w-96 bg-base-100 shadow-xl" onMouseOver={()=>setHover(false)} onMouseLeave={()=>setHover(true)}>
           <figure className="px-10 pt-10">
             <div className="avatar">
               <div className="w-32 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
