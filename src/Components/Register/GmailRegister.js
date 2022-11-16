@@ -36,12 +36,12 @@ console.log(errors);
 
   return (
     <div className="w-full bg-primary mt-12 p-4">
-      <div className=" h-[90vh] w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
+      <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
         <h1 className="text-4xl text-center uppercase text-primary pt-4">
           Register yourself
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="mx-24 my-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="mx-6 lg:mx-24 my-6">
           <div class="form-control w-full my-6">
             <input
               {...register("email", {
@@ -97,7 +97,6 @@ console.log(errors);
               </span>
             )}
           </div>
-
           <div className="form-control">
             <select {...register("department", {
                 required: {
@@ -117,10 +116,16 @@ console.log(errors);
                   : "input-bordered border-2"
               }`}
               >
-              <option defaultValue="">Department</option>
-              <option value="Mrs">Mrs</option>
-              <option value="Miss">Miss</option>
-              <option value="Dr">Dr</option>
+              <option className="text-lg font-sans" defaultValue="">Your Department</option>
+              <option className="text-lg font-sans" Value="Architecture">Architecture</option>
+              <option className="text-lg font-sans" Value="CSE">CSE</option>
+              <option className="text-lg font-sans" Value="CS">CS</option>
+              <option className="text-lg font-sans" Value="EEE">EEE</option>
+              <option className="text-lg font-sans" Value="IPE">IPE</option>
+              <option className="text-lg font-sans" Value="ME">ME</option>
+              <option className="text-lg font-sans" Value="TE">TE</option>
+              <option className="text-lg font-sans" Value="SOB">SOB</option>
+              
             </select>
             {errors.department?.type === "required" && (
               <span class="label-text-alt text-red-600 mt-4">
@@ -129,7 +134,119 @@ console.log(errors);
             )}
           </div>
 
-          {/* <div class="form-control w-full">
+          <div class="form-control w-full my-6">
+            <input
+              {...register("id", {
+                required: {
+                  value: true,
+                  message: "ID is Required",
+                },
+              })}
+              type="text"
+              placeholder="STUDENT ID"
+              className={`input placeholder:text-md placeholder:font-sans placeholder:font-bold ${
+                errors.id?.type === "required"
+                  ? "border-secondary"
+                  : "input-bordered border-2"
+              }`}
+            />
+            {errors.id?.type === "required" && (
+              <span class="label-text-alt text-red-600 mt-4">
+                {errors.id?.message}
+              </span>
+            )}
+          </div>
+
+          <div className="form-control my-4">
+            <select {...register("semester", {
+                required: {
+                  value: "Semester",
+                  message: "Semester is required",
+                },
+                
+              })}
+              type="text"
+              placeholder="Semester"
+              className={`input placeholder-primary placeholder:text-lg placeholder:font-bold ${
+                errors.semester?.type === "required"
+                  ? "border-secondary"
+                  : "input-bordered border-2"
+              }`}
+              >
+              <option className="text-lg font-sans" defaultValue="">Your Semester</option>
+              <option className="text-lg font-sans" Value="1/1">1/1</option>
+              <option className="text-lg font-sans" Value="1/2">1/2</option>
+              <option className="text-lg font-sans" Value="2/1">2/1</option>
+              <option className="text-lg font-sans" Value="2/2">2/2</option>
+              <option className="text-lg font-sans" Value="3/1">3/2</option>
+              <option className="text-lg font-sans" Value="4/1">4/1</option>
+              <option className="text-lg font-sans" Value="4/2">4/2</option>
+              <option className="text-lg font-sans" Value="5/1">5/1</option>
+              <option className="text-lg font-sans" Value="5/2">5/2</option>
+              
+            </select>
+            {errors.semester?.type === "required" && (
+              <span class="label-text-alt text-red-600 mt-4">
+                {errors.semester?.message}
+              </span>
+            )}
+          </div>
+          
+          <div class="form-control w-full my-6 relative">
+            <input
+              {...register("birthDate", {
+                required: {
+                  value: true,
+                  message: "Birth day is Required",
+                },
+              })}
+              type="date"
+              placeholder="Birth day date"
+              className={`input placeholder:text-md placeholder:font-sans placeholder:font-bold ${
+                errors.id?.type === "required"
+                  ? "border-secondary"
+                  : "input-bordered border-2"
+              }`}
+            />
+            {errors.birthDate?.type === "required" && (
+              <span class="label-text-alt text-red-600 mt-4">
+                {errors.birthDate?.message}
+              </span>
+            )}
+          </div>
+
+          <div className="form-control my-4">
+            <select {...register("blood", {
+                required: {
+                  value: "Blood",
+                  message: "Blood group is required",
+                },
+                
+              })}
+              type="text"
+              placeholder="Blood"
+              className={`input placeholder-primary placeholder:text-lg placeholder:font-bold ${
+                errors.blood?.type === "required"
+                  ? "border-secondary"
+                  : "input-bordered border-2"
+              }`}
+              >
+              <option className="text-lg font-sans" defaultValue="">Your Blood Group</option>
+              <option className="text-lg font-sans" Value="A+">A+</option>
+              <option className="text-lg font-sans" Value="B+">B+</option>
+              <option className="text-lg font-sans" Value="O+">O+</option>
+              <option className="text-lg font-sans" Value="AB+">AB+</option>
+              <option className="text-lg font-sans" Value="AB-">AB-</option>
+              <option className="text-lg font-sans" Value="A-">A-</option>
+            </select>
+            {errors.semester?.type === "required" && (
+              <span class="label-text-alt text-red-600 mt-4">
+                {errors.semester?.message}
+              </span>
+            )}
+          </div>
+
+           {/* <div class="form-control w-full">
             <input
               {...register("password", {
                 minLength: {
@@ -160,10 +277,10 @@ console.log(errors);
                 {errors.password?.message}
               </span>
             )}
-          </div> */}
+          </div> */} 
 
           <button
-            className="btn btn-primary w-full text-white mt-16"
+            className="btn btn-primary w-full text-white my-12"
             type="submit"
             value="LogIn"
           >
