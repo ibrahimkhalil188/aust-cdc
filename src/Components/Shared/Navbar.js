@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Assets/Logo/austlogo.png";
 import "../../Style/Navbar.style.css";
 const Navbar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [headerColor, setHeaderColor] = useState("white");
   const listenScrollEvent = () => {
     window.scrollY > 20 ? setHeaderColor("white") : setHeaderColor("");
@@ -112,7 +112,7 @@ const Navbar = () => {
                 <ul className="dropdown cursor-pointer ">
                   <li> Governing Panel</li>
                   <ul className="dropdown-1 text-sm text-primary bg-white">
-                    <li className="my-2 fall21">
+                    <li className="fall21">
                       Fall 21 panel
                       <ul className="dropdown-2 bg-white text-primary">
                         <li>
@@ -127,7 +127,7 @@ const Navbar = () => {
                         </li>
                       </ul>
                     </li>
-                    <li className="my-2 spring21">
+                    <li className="spring21">
                       Spring 21 panel
                       <ul className="dropdown-3 bg-white text-primary">
                         <li>
