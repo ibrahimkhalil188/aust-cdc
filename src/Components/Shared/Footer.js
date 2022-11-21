@@ -9,6 +9,7 @@ import { IoLogoYoutube } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import austLogo from "../../Assets/Images/aust_logo.svg";
 import austcdc from "../../Assets/Logo/cdc_footertwo.png";
+import { ContactUs } from "./Emailjs";
 import SubFooter from "./SubFooter";
 const Footer = () => {
   return (
@@ -73,22 +74,9 @@ const Footer = () => {
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </div>
-        <div>
-          <h1 className="text-2xl w-32 uppercase">
-            Email us <hr></hr>
-          </h1>
-          <div className="w-72">
-            <input
-              type="text"
-              placeholder="Type here"
-              className="input input-sm w-full cursor-auto text-primary"
-            />
-            <textarea
-              className="textarea w-full h-[150px] mt-4"
-              placeholder="Bio"
-            ></textarea>
-          </div>
-        </div>
+
+        {/* Sent email */}
+       <ContactUs></ContactUs>
       </footer>
       <div className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
         <div className="bg-white h-[0.2px] mx-48"></div>
