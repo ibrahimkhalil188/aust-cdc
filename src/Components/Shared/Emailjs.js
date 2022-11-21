@@ -8,7 +8,7 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_hf32esn', 'template_wi2kdse', form.current, 'UdkqsamMSobGuQ6BO')
+    emailjs.sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE_KEY, process.env.REACT_APP_EMAIL_JS_TEMPLATE_KEY, form.current, process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY)
       .then((result) => {
           toast.success("Email sent Successfully");
       }, (error) => {
