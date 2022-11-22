@@ -16,7 +16,7 @@ import image3 from "../../Assets/Images/slider_three-01.png";
 import image2 from "../../Assets/Images/slider_two-01.png";
 const ContactSlider = () => {
   return (
-    <>
+    <div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -41,7 +41,7 @@ const ContactSlider = () => {
           <img className="w-full object-fill" src={image3} alt="" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

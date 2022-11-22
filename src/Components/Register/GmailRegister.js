@@ -23,6 +23,7 @@ const GmailRegister = () => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="mx-6 lg:mx-24 my-6">
           <div class="form-control w-full my-6">
+            <label className="font-bold m-2">Email ID</label>
             <input
               {...register("email", {
                 pattern: {
@@ -36,7 +37,7 @@ const GmailRegister = () => {
               })}
               type="email"
               placeholder="EMAIL ID"
-              className={`input placeholder:text-md placeholder:font-sans placeholder:font-bold ${
+              className={`input ${
                 errors.name?.type === "required" ||
                 errors.email?.type === "pattern"
                   ? "border-secondary"
@@ -84,10 +85,6 @@ const GmailRegister = () => {
                   value: "Department name",
                   message: "Department is required",
                 },
-                /* pattern: {
-                  value: "Department name",
-                  message: "Invalid email",
-                } */
               })}
               type="text"
               placeholder="Department Name"
@@ -98,8 +95,8 @@ const GmailRegister = () => {
               }`}
             >
               <option className="text-lg font-sans" defaultValue="">
-                Your Department
-              </option>
+                
+              </option> 
               <option className="text-lg font-sans" Value="Architecture">
                 Architecture
               </option>

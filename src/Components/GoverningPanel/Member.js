@@ -19,10 +19,10 @@ const Member = () => {
     }
   ];
   return (
-    <div className="flex justify-around items-center mt-12">
+    <div className="lg:flex justify-around items-center mt-12 lg:w-[1200px]">
       {member.map((m) => (
         <div>
-          <div className="card card-compact w-96 bg-base-100 shadow-2xl">
+          <div className="card card-compact w-96 bg-base-100 shadow-2xl mt-12 lg:mt-2">
             
               <img className="h-[350px]" src="https://placeimg.com/400/225/arch" alt="Shoes" />
            

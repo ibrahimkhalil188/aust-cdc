@@ -6,6 +6,7 @@ import Footer from "./Components/Shared/Footer";
 import Navbar from "./Components/Shared/Navbar";
 import NotFound from "./Components/Shared/NotFound";
 import SubNavbar from "./Components/Shared/SubNavbar";
+import AdvisorsPanel from "./Pages/AdvisorPanel";
 import About from "./Pages/About";
 import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
@@ -37,6 +38,7 @@ function App() {
         ></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<LogIn></LogIn>}></Route>
+        <Route path="/advisorPanel" element={<AdvisorsPanel></AdvisorsPanel>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

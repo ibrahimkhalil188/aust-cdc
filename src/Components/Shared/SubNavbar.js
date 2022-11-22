@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const SubNavbar = () => {
 
   return (
-    <div>
+    <div id="TopSection">
       <div className="h-8 w-full bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
         
         <div className="flex justify-between items-center px-6 lg:px-12">

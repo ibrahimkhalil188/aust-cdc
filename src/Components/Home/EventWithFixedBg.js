@@ -63,7 +63,7 @@ const EventWithFixedBg = () => {
         className="mySwiper"
       >
         {
-          event.map(singleEvent=><SwiperSlide>
+          event.map(singleEvent=><SwiperSlide key={singleEvent.id}>
             <div className="hero min-h-screen">
               <div className="hero-content flex-col lg:flex-row">
               <div className="hidden lg:block">

@@ -55,7 +55,7 @@ const LatestNews = () => {
         className="mySwiper"
       >
         {
-          news.map(singleNews=><SwiperSlide>
+          news.map(singleNews=><SwiperSlide key={singleNews.id}>
             <div className="hero min-h-screen">
               <div className="hero-content flex-col-reverse lg:flex-row">
                 <div>
