@@ -23,7 +23,7 @@ const GmailRegister = () => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="mx-6 lg:mx-24 my-6">
           <div class="form-control w-full my-6">
-            <label className="font-bold m-2">Email ID</label>
+            <label className="font-bold font-sans mx-2 text-primary">Email ID</label>
             <input
               {...register("email", {
                 pattern: {
@@ -57,6 +57,7 @@ const GmailRegister = () => {
           </div>
 
           <div class="form-control w-full my-6">
+          <label className="font-bold font-sans mx-2 text-primary">Name</label>
             <input
               {...register("name", {
                 required: {
@@ -66,7 +67,7 @@ const GmailRegister = () => {
               })}
               type="text"
               placeholder="YOUR FULL NAME"
-              className={`input placeholder:text-md placeholder:font-sans placeholder:font-bold ${
+              className={`input ${
                 errors.name?.type === "required"
                   ? "border-secondary"
                   : "input-bordered border-2"
@@ -79,6 +80,7 @@ const GmailRegister = () => {
             )}
           </div>
           <div className="form-control">
+          <label className="font-bold font-sans mx-2 text-primary">Department</label>
             <select
               {...register("department", {
                 required: {
@@ -95,7 +97,7 @@ const GmailRegister = () => {
               }`}
             >
               <option className="text-lg font-sans" defaultValue="">
-                
+              Your Department
               </option> 
               <option className="text-lg font-sans" Value="Architecture">
                 Architecture
@@ -130,6 +132,7 @@ const GmailRegister = () => {
           </div>
 
           <div class="form-control w-full my-6">
+          <label className="font-bold font-sans mx-2 text-primary">Student ID</label>
             <input
               {...register("id", {
                 required: {
@@ -139,7 +142,7 @@ const GmailRegister = () => {
               })}
               type="text"
               placeholder="STUDENT ID"
-              className={`input placeholder:text-md placeholder:font-sans placeholder:font-bold ${
+              className={`input ${
                 errors.id?.type === "required"
                   ? "border-secondary"
                   : "input-bordered border-2"
@@ -153,6 +156,7 @@ const GmailRegister = () => {
           </div>
 
           <div className="form-control my-4">
+          <label className="font-bold font-sans mx-2 text-primary">Semester</label>
             <select
               {...register("semester", {
                 required: {
@@ -207,6 +211,7 @@ const GmailRegister = () => {
           </div>
 
           <div class="form-control w-full my-6 relative">
+          <label className="font-bold font-sans mx-2 text-primary">Birth date</label>
             <input
               {...register("birthDate", {
                 required: {
@@ -230,6 +235,7 @@ const GmailRegister = () => {
           </div>
 
           <div className="form-control my-4">
+          <label className="font-bold font-sans mx-2 text-primary">Blood Group</label>
             <select
               {...register("blood", {
                 required: {
@@ -276,9 +282,8 @@ const GmailRegister = () => {
 
           <div>
           <fieldset className="border border-primary"
-          
           >
-            <legend className="text-xl mx-4 px-2">Your favourite area</legend>
+            <legend className="text-primary mx-4 font-sans font-bold px-2">Your favourite area</legend>
             <div className="lg:flex justify-around mx-4">
               <div>
                 <input

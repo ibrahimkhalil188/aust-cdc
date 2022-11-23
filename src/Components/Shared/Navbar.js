@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>
           <div className={`${!open?"hidden":"block"} absolute right-0 bg-white w-full px-4`}>
           <ul className="flex flex-col text-lg font-bold">
-              <li className="my-2 my-2cursor-pointer ">
+              <li className="my-2 my-2cursor-pointer " onClick={()=>setOpen(false)}>
                 <Link to="/">Home</Link>
               </li>
               <ul className="dropdown cursor-pointer ">
@@ -84,7 +84,7 @@ const Navbar = () => {
               <li className="my-2 cursor-pointer ">
                 <Link to="/captureCollection">Preeminenece gallery</Link>
               </li>
-              <li>
+              <li onClick={()=>setOpen(false)}>
                 {" "}
                 <Link to="/event">Event</Link>
               </li>

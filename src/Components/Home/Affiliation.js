@@ -142,9 +142,9 @@ const Affiliation = () => {
       <div className="bg-primary h-1 w-[100%]"></div>
       </div>
       </div>
-      <div className="lg:w-[1200px] grid grid-cols-2 lg:grid-cols-6 lg:gap-8 mx-auto mt-16 lg:mt-24">
+      <div className="App ml-16 grid grid-cols-2 lg:grid-cols-6 lg:gap-8 gap-4 lg:mx-auto mt-16 lg:mt-24">
         {affiliation.map((a) => (
-          <div key={a.id} className="h-24 w-24 lg:h-36 lg:w-36 shadow-lg flex justify-center items-center hover:scale-105 customCard"><img className="w-[90px] lg:w-[90px]" src={a.image} alt=""/></div>
+          <div key={a.id} className="h-24 w-24 lg:h-36 lg:w-36 shadow-lg flex justify-center items-center hover:scale-105 customCard"><img className="w-[90px] lg:w-[90px] " src={a.image} alt=""/></div>
         ))}
       </div>
     </div>

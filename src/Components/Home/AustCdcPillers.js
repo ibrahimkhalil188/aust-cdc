@@ -36,7 +36,7 @@ const AustCdcPillers = () => {
         <div className="flex justify-center">
         <div>
         <h1 className="text-center text-4xl lg:text-5xl mt-8 lg:mt-24 font-semibold"><span className="text-primary">AUSTCDC</span> <span className="text-secondary">MOTO</span></h1>
-        <div className="bg-primary h-1 w-[540px] lg:w-[100%]"></div>
+        <div className="bg-primary h-1 w-[300px] lg:w-[100%]"></div>
         </div>
         </div>
       <div className="lg:flex justify-around items-center mt-16 mx-auto lg:w-[1300px]">

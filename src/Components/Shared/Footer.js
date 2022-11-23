@@ -1,22 +1,20 @@
 import React from "react";
-import { HashLink as Link } from 'react-router-hash-link';
 import { AiFillLinkedin } from "react-icons/ai";
 import {
   FaFacebookMessenger,
   FaFacebookSquare,
-  FaInstagramSquare,
+  FaInstagramSquare
 } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
+import { HashLink as Link } from 'react-router-hash-link';
 import austLogo from "../../Assets/Images/aust_logo.svg";
 import austcdc from "../../Assets/Logo/austcdc_logo.svg";
-import { ContactUs, EmailJs } from "./Emailjs";
-import Line from "./Line";
+import { EmailJs } from "./Emailjs";
 import SubFooter from "./SubFooter";
 const Footer = () => {
   return (
-    <div className="mt-12">
-      <footer className=" lg:flex p-10 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29] text-white">
+    <div className="mt-12 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
+      <footer className=" lg:flex p-10 text-white lg:App">
         <div className="lg:w-[35%] mr-[5%]">
           <div>
             <div className="flex flex-row">
