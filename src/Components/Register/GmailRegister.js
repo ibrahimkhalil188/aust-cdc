@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 const GmailRegister = () => {
-  const [checkboxCount,setCheckboxCount] = useState(0);
+ const [other,setOther] =useState(false);
   const {
     register,
     handleSubmit,
@@ -281,10 +281,10 @@ const GmailRegister = () => {
           </div>
 
           <div>
-          <fieldset className="border border-primary"
+          <fieldset className="border border-primary font-sans font-bold "
           >
             <legend className="text-primary mx-4 font-sans font-bold px-2">Your favourite area</legend>
-            <div className="lg:flex justify-around mx-4">
+            <div className="lg:grid grid-cols-3 ml-8 gap-4 my-4">
               <div>
                 <input
                 {...register("checkbox", {
@@ -293,8 +293,8 @@ const GmailRegister = () => {
                     message: "checkbox is required",
                   },
                 })}
-                 type="checkbox" value="Arts & Illustration" onClick={()=>setCheckboxCount(checkboxCount+1)}/>
-                <label for="fname" className="text-xl">
+                 type="checkbox" value="Arts & Illustration"/>
+                <label for="fname" className="ml-2">
                   Arts & Illustration
                 </label>
               </div>
@@ -306,8 +306,8 @@ const GmailRegister = () => {
                     message: "checkbox is required",
                   },
                 })}
-                type="checkbox" value="Innovation & Business Idea" onClick={()=>setCheckboxCount(checkboxCount+1)}/>
-                <label for="lname" className="text-xl">
+                type="checkbox" value="Innovation & Business Idea"/>
+                <label for="lname" className="ml-2">
                   Innovation & Business Idea
                 </label>
               </div>
@@ -319,13 +319,11 @@ const GmailRegister = () => {
                     message: "checkbox is required",
                   },
                 })}
-                 type="checkbox" value="Event Management" onClick={()=>setCheckboxCount(checkboxCount+1)}/>
-                <label for="email" className="text-xl">
+                 type="checkbox" value="Event Management"/>
+                <label for="email" className="ml-2">
                   Event Management
                 </label>
               </div>
-            </div>
-            <div className="lg:flex justify-around mx-4">
               <div>
                 <input
                 {...register("checkbox", {
@@ -334,34 +332,133 @@ const GmailRegister = () => {
                     message: "checkbox is required",
                   },
                 })}
-                 type="checkbox" value="Arts & Illustration" onClick={()=>setCheckboxCount(checkboxCount+1)}/>
-                <label for="fname" className="text-xl">
-                  Arts & Illustration
+                 type="checkbox" value="Graphic Design"/>
+                <label for="fname" className="ml-2">
+                Graphic Design
                 </label>
               </div>
               <div>
-                <input type="checkbox" value="Innovation & Business Idea" onClick={()=>setCheckboxCount(checkboxCount+1)}/>
-                <label for="lname" className="text-xl">
-                  Innovation & Business Idea
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                type="checkbox" value="Graphic Design"/>
+                <label for="lname" className="ml-2">
+                Graphic Design
                 </label>
               </div>
               <div>
-                <input type="checkbox" value="Event Management" checked={()=>setCheckboxCount(checkboxCount+1)}/>
-                <label for="email" className="text-xl">
-                  Event Management
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Animation"/>
+                <label for="email" className="ml-2">
+                Animation
                 </label>
+              </div>
+              <div>
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Web design"/>
+                <label for="email" className="ml-2">
+                Web design
+                </label>
+              </div>
+              <div>
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Case Study
+                 "/>
+                <label for="email" className="ml-2">
+                Case Study
+                </label>
+              </div>
+              <div>
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Public Speaking"/>
+                <label for="email" className="ml-2">
+                Public Speaking
+                </label>
+              </div>
+              <div>
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Content Writing"/>
+                <label for="email" className="ml-2">
+                Content Writing
+                </label>
+              </div>
+              <div>
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Marketing"/>
+                <label for="email" className="ml-2">
+                Marketing
+                </label>
+              </div>
+              <div>
+                <input
+                {...register("checkbox", {
+                  required: {
+                    value: "checkbox",
+                    message: "checkbox is required",
+                  },
+                })}
+                 type="checkbox" value="Others"onClick={()=>setOther(!other)}/>
+                <label for="email" className="ml-2" >
+                Others
+                </label>
+                {
+                  other?<input
+                  {...register("others", {
+                    required: {
+                      value: true,
+                      message: "ID is Required",
+                    },
+                  })} className="input input-bordered"></input>:""
+                }
               </div>
             </div>
-            
+      
           </fieldset>
           {errors.checkbox?.type === "required" && (
               <span class="label-text-alt text-red-600 mt-4">
                 {errors.checkbox?.message}
               </span>
             )}
-            {
-              checkboxCount>=3?<span>ONly three option!</span>:""
-            }
           </div>
 
           {/* <div class="form-control w-full">
