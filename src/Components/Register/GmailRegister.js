@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 const GmailRegister = () => {
- const [other,setOther] =useState(false);
+  const [other, setOther] = useState(false);
+  const [payment, setPayment] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({defaultValues: {
-    checkbox: [],
-    radio: "",
-  }});
+  } = useForm({
+    defaultValues: {
+      checkbox: [],
+      radio: "",
+    },
+  });
   const onSubmit = (data) => {
-    console.log(data.checkbox.length)
+    console.log(data.checkbox.length);
   };
-  
+
   return (
     <div className="w-full bg-primary mt-12 p-4">
       <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
@@ -23,7 +26,9 @@ const GmailRegister = () => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="mx-6 lg:mx-24 my-6">
           <div class="form-control w-full my-6">
-            <label className="font-bold font-sans mx-2 text-primary">Email ID</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Email ID
+            </label>
             <input
               {...register("email", {
                 pattern: {
@@ -57,7 +62,9 @@ const GmailRegister = () => {
           </div>
 
           <div class="form-control w-full my-6">
-          <label className="font-bold font-sans mx-2 text-primary">Name</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Name
+            </label>
             <input
               {...register("name", {
                 required: {
@@ -80,7 +87,9 @@ const GmailRegister = () => {
             )}
           </div>
           <div className="form-control">
-          <label className="font-bold font-sans mx-2 text-primary">Department</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Department
+            </label>
             <select
               {...register("department", {
                 required: {
@@ -97,8 +106,8 @@ const GmailRegister = () => {
               }`}
             >
               <option className="text-lg font-sans" defaultValue="">
-              Your Department
-              </option> 
+                Your Department
+              </option>
               <option className="text-lg font-sans" Value="Architecture">
                 Architecture
               </option>
@@ -132,7 +141,9 @@ const GmailRegister = () => {
           </div>
 
           <div class="form-control w-full my-6">
-          <label className="font-bold font-sans mx-2 text-primary">Student ID</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Student ID
+            </label>
             <input
               {...register("id", {
                 required: {
@@ -156,7 +167,9 @@ const GmailRegister = () => {
           </div>
 
           <div className="form-control my-4">
-          <label className="font-bold font-sans mx-2 text-primary">Semester</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Semester
+            </label>
             <select
               {...register("semester", {
                 required: {
@@ -211,7 +224,9 @@ const GmailRegister = () => {
           </div>
 
           <div class="form-control w-full my-6 relative">
-          <label className="font-bold font-sans mx-2 text-primary">Birth date</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Birth date
+            </label>
             <input
               {...register("birthDate", {
                 required: {
@@ -235,7 +250,9 @@ const GmailRegister = () => {
           </div>
 
           <div className="form-control my-4">
-          <label className="font-bold font-sans mx-2 text-primary">Blood Group</label>
+            <label className="font-bold font-sans mx-2 text-primary">
+              Blood Group
+            </label>
             <select
               {...register("blood", {
                 required: {
@@ -281,183 +298,341 @@ const GmailRegister = () => {
           </div>
 
           <div>
-          <fieldset className="border border-primary font-sans font-bold "
-          >
-            <legend className="text-primary mx-4 font-sans font-bold px-2">Your favourite area</legend>
-            <div className="lg:grid grid-cols-3 ml-8 gap-4 my-4">
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Arts & Illustration"/>
-                <label for="fname" className="ml-2">
-                  Arts & Illustration
-                </label>
+            <fieldset className="border border-primary font-sans font-bold ">
+              <legend className="text-primary mx-4 font-sans font-bold px-2">
+                Your favourite area
+              </legend>
+              <div className="lg:grid grid-cols-3 ml-8 gap-4 my-4">
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Arts & Illustration"
+                  />
+                  <label for="fname" className="ml-2">
+                    Arts & Illustration
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Innovation & Business Idea"
+                  />
+                  <label for="lname" className="ml-2">
+                    Innovation & Business Idea
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Event Management"
+                  />
+                  <label for="email" className="ml-2">
+                    Event Management
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Graphic Design"
+                  />
+                  <label for="fname" className="ml-2">
+                    Graphic Design
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Graphic Design"
+                  />
+                  <label for="lname" className="ml-2">
+                    Graphic Design
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Animation"
+                  />
+                  <label for="email" className="ml-2">
+                    Animation
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Web design"
+                  />
+                  <label for="email" className="ml-2">
+                    Web design
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Case Study
+                 "
+                  />
+                  <label for="email" className="ml-2">
+                    Case Study
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Public Speaking"
+                  />
+                  <label for="email" className="ml-2">
+                    Public Speaking
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Content Writing"
+                  />
+                  <label for="email" className="ml-2">
+                    Content Writing
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Marketing"
+                  />
+                  <label for="email" className="ml-2">
+                    Marketing
+                  </label>
+                </div>
+                <div>
+                  <input
+                    {...register("checkbox", {
+                      required: {
+                        value: "checkbox",
+                        message: "checkbox is required",
+                      },
+                    })}
+                    type="checkbox"
+                    value="Others"
+                    onClick={() => setOther(!other)}
+                  />
+                  <label for="email" className="ml-2">
+                    Others
+                  </label>
+                  {other ? (
+                    <input
+                      {...register("others", {
+                        required: {
+                          value: true,
+                          message: "Write something on others filed",
+                        },
+                      })}
+                      className="input input-bordered"
+                    ></input>
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                type="checkbox" value="Innovation & Business Idea"/>
-                <label for="lname" className="ml-2">
-                  Innovation & Business Idea
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Event Management"/>
-                <label for="email" className="ml-2">
-                  Event Management
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Graphic Design"/>
-                <label for="fname" className="ml-2">
-                Graphic Design
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                type="checkbox" value="Graphic Design"/>
-                <label for="lname" className="ml-2">
-                Graphic Design
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Animation"/>
-                <label for="email" className="ml-2">
-                Animation
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Web design"/>
-                <label for="email" className="ml-2">
-                Web design
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Case Study
-                 "/>
-                <label for="email" className="ml-2">
-                Case Study
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Public Speaking"/>
-                <label for="email" className="ml-2">
-                Public Speaking
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Content Writing"/>
-                <label for="email" className="ml-2">
-                Content Writing
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Marketing"/>
-                <label for="email" className="ml-2">
-                Marketing
-                </label>
-              </div>
-              <div>
-                <input
-                {...register("checkbox", {
-                  required: {
-                    value: "checkbox",
-                    message: "checkbox is required",
-                  },
-                })}
-                 type="checkbox" value="Others"onClick={()=>setOther(!other)}/>
-                <label for="email" className="ml-2" >
-                Others
-                </label>
-                {
-                  other?<input
-                  {...register("others", {
-                    required: {
-                      value: true,
-                      message: "ID is Required",
-                    },
-                  })} className="input input-bordered"></input>:""
-                }
-              </div>
-            </div>
-      
-          </fieldset>
-          {errors.checkbox?.type === "required" && (
+            </fieldset>
+            {errors.checkbox?.type === "required" && (
               <span class="label-text-alt text-red-600 mt-4">
                 {errors.checkbox?.message}
               </span>
+            )}
+          </div>
+
+          <div className="mt-4">
+            <label className="font-bold font-sans mx-2 text-primary ">
+              Payment
+            </label>
+            <br />
+            <div className="mx-6">
+              <input
+                {...register("radio", {
+                  required: {
+                    value: "payment",
+                    message: "radio is required",
+                  },
+                })}
+                type="radio"
+                value="Online"
+                onClick={() => setPayment("online")}
+              />
+              <label
+                for="payment"
+                className="ml-1 mr-8 font-sans font-bold text-md uppercase"
+              >
+                Online
+              </label>
+              <input
+                {...register("radio", {
+                  required: {
+                    value: "payment",
+                    message: "radio is required",
+                  },
+                })}
+                type="radio"
+                value="offline"
+                onClick={() => setPayment("offline")}
+              />
+              <label
+                for="payment"
+                className="ml-1 font-sans font-bold text-md uppercase"
+              >
+                Offline
+              </label>
+            </div>
+          </div>
+          <div>
+            {payment === "offline" ? <span>Offline</span> : ""}
+            {payment === "online" ? (
+              <div className="font-sans font-bold">
+                <label className="font-bold font-sans mx-2 text-primary ">
+                  Payment Method
+                </label>
+                <br />
+                <div className="ml-6">
+                  <input
+                    {...register("radio", {
+                      required: {
+                        value: "onlinePayment",
+                        message: "radio is required",
+                      },
+                    })}
+                    type="radio"
+                    value="Bkash"
+                    name="onlinePayment"
+                  />
+                  <label for="onlinePayment" className="ml-2">
+                    Bkash
+                  </label>
+                </div>
+                <div className="ml-6">
+                  <input
+                    {...register("radio", {
+                      required: {
+                        value: "onlinePayment",
+                        message: "radio is required",
+                      },
+                    })}
+                    type="radio"
+                    value="Nagad"
+                    name="onlinePayment"
+                  />
+                  <label for="onlinePayment" className="ml-2">
+                    Nagad
+                  </label>
+                </div>
+                <div className="ml-6">
+                  <input
+                    {...register("radio", {
+                      required: {
+                        value: "onlinePayment",
+                        message: "radio is required",
+                      },
+                    })}
+                    type="radio"
+                    value="Rocket"
+                    name="onlinePayment"
+                  />
+                  <label for="onlinePayment" className="ml-2">
+                    Rocket
+                  </label>
+                </div>
+                <div class="form-control w-full my-6">
+            <label className="font-bold font-sans mx-2 text-primary">
+              Transaction ID
+            </label>
+            <input
+              {...register("Transaction ID", {
+                required: {
+                  value: true,
+                  message: "Transaction ID is Required",
+                },
+              })}
+              type="text"
+              placeholder="Transaction ID"
+              className={`input mt-2 ${
+                errors.name?.type === "required"
+                  ? "border-secondary"
+                  : "input-bordered border-2"
+              }`}
+            />
+            {errors.name?.type === "required" && (
+              <span class="label-text-alt text-red-600 mt-4">
+                {errors.name?.message}
+              </span>
+            )}
+          </div>
+              </div>
+            ) : (
+              ""
             )}
           </div>
 
