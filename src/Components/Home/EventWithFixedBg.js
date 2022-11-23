@@ -12,29 +12,34 @@ import "../../Style/slider.style.css";
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
 import image1 from "../../Assets/Images/aust_logo.svg";
+import image2 from "../../Assets/Images/resulote.png";
+import image3 from "../../Assets/Images/corporate_crake.jpg";
+import image4 from "../../Assets/Images/design_your_career.jpg";
 const EventWithFixedBg = () => {
   const event = [
     {
       id:"1",
       title:"Event tittle",
-      image:image1,
+      image:image2,
       des:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam excepturi voluptatibus unde necessitatibus quae, molestiae ea consequatur iste iusto nihil, odit quaerat enim officia nam voluptas obcaecati! Quod, ad libero?"
     },
     {
       id:"2",
-      title:"Event tittle",
-      image:image1,
+      title:"Corporate Cracking: Crack the interview ",
+      image:image3,
       des:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam excepturi voluptatibus unde necessitatibus quae, molestiae ea consequatur iste iusto nihil, odit quaerat enim officia nam voluptas obcaecati! Quod, ad libero?"
     },
     {
       id:"3",
-      image:image1,     
-      title:"Event tittle",
-      des:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam excepturi voluptatibus unde necessitatibus quae, molestiae ea consequatur iste iusto nihil, odit quaerat enim officia nam voluptas obcaecati! Quod, ad libero?"
-    }
+      image:image4,     
+      title:"Design Your Career 101 (Fall21)",
+      des: ""
+    },
   ]
   return (
    
+    
+    
     <div>
      < div className=" flex items-center flex-col">
           <h1 className="text-6xl mt-16 text-secondary">EVENTS</h1>
