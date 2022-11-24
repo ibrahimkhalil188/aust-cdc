@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 const GmailRegister = () => {
   const [other, setOther] = useState(false);
   const [payment, setPayment] = useState("");
+  const ImageStorageKey = "5cb95fcec85252f31df0df859b7fc24a"
   const {
     register,
     handleSubmit,
@@ -14,7 +15,20 @@ const GmailRegister = () => {
     },
   });
   const onSubmit = (data) => {
-    console.log(data.checkbox.length);
+    const image =data.image[0];
+    const formData = new FormData();
+    formData.append("image",image);
+    const url =`https://api.imgbb.com/1/upload?key=${ImageStorageKey}`
+    fetch(url,{
+      method:'POST',
+      body:formData
+    })
+    .then(res=>res.json())
+    .then(result=>{
+      if(result.success){
+        data={...data,image:result.data.url}
+      }
+    })
   };
 
   return (
@@ -24,7 +38,8 @@ const GmailRegister = () => {
           Register yourself
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="mx-6 lg:mx-24 my-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="font-sans font-bold mx-6 lg:mx-24 my-6">
+          {/* Avatar or profile image */}
           <div class="form-control w-full my-6">
             <label className="font-bold font-sans mx-2 text-primary">
               Email ID
@@ -41,7 +56,6 @@ const GmailRegister = () => {
                 },
               })}
               type="email"
-              placeholder="EMAIL ID"
               className={`input ${
                 errors.name?.type === "required" ||
                 errors.email?.type === "pattern"
@@ -73,7 +87,6 @@ const GmailRegister = () => {
                 },
               })}
               type="text"
-              placeholder="YOUR FULL NAME"
               className={`input ${
                 errors.name?.type === "required"
                   ? "border-secondary"
@@ -93,20 +106,19 @@ const GmailRegister = () => {
             <select
               {...register("department", {
                 required: {
-                  value: "Department name",
+                  value: true,
                   message: "Department is required",
                 },
               })}
               type="text"
-              placeholder="Department Name"
               className={`input placeholder-primary placeholder:text-lg placeholder:font-bold ${
                 errors.department?.type === "required"
                   ? "border-secondary"
                   : "input-bordered border-2"
               }`}
             >
-              <option className="text-lg font-sans" defaultValue="">
-                Your Department
+              <option className="text-lg font-sans" value="">
+                
               </option>
               <option className="text-lg font-sans" Value="Architecture">
                 Architecture
@@ -152,7 +164,6 @@ const GmailRegister = () => {
                 },
               })}
               type="text"
-              placeholder="STUDENT ID"
               className={`input ${
                 errors.id?.type === "required"
                   ? "border-secondary"
@@ -178,7 +189,6 @@ const GmailRegister = () => {
                 },
               })}
               type="text"
-              placeholder="Semester"
               className={`input placeholder-primary placeholder:text-lg placeholder:font-bold ${
                 errors.semester?.type === "required"
                   ? "border-secondary"
@@ -186,7 +196,6 @@ const GmailRegister = () => {
               }`}
             >
               <option className="text-lg font-sans" defaultValue="">
-                Your Semester
               </option>
               <option className="text-lg font-sans" Value="1/1">
                 1/1
@@ -261,7 +270,6 @@ const GmailRegister = () => {
                 },
               })}
               type="text"
-              placeholder="Blood"
               className={`input placeholder-primary placeholder:text-lg placeholder:font-bold ${
                 errors.blood?.type === "required"
                   ? "border-secondary"
@@ -269,7 +277,7 @@ const GmailRegister = () => {
               }`}
             >
               <option className="text-lg font-sans" defaultValue="">
-                Your Blood Group
+               
               </option>
               <option className="text-lg font-sans" Value="A+">
                 A+
@@ -550,7 +558,73 @@ const GmailRegister = () => {
             </div>
           </div>
           <div>
-            {payment === "offline" ? <span>Offline</span> : ""}
+            {payment === "offline" ? (
+              <div className="font-sans font-bold">
+                <label className="font-bold font-sans mx-2 text-primary ">
+                  Payment Method
+                </label>
+                <br />
+                <div className="ml-6">
+                  <input
+                    {...register("radio", {
+                      required: {
+                        value: "onlinePayment",
+                        message: "radio is required",
+                      },
+                    })}
+                    type="radio"
+                    value="Cash"
+                    name="onlinePayment"
+                  />
+                  <label for="onlinePayment" className="ml-2">
+                    Cash
+                  </label>
+                </div>
+                <div className="ml-6">
+                  <input
+                    {...register("radio", {
+                      required: {
+                        value: "onlinePayment",
+                        message: "radio is required",
+                      },
+                    })}
+                    type="radio"
+                    value="Booth"
+                    name="onlinePayment"
+                  />
+                  <label for="onlinePayment" className="ml-2">
+                    Booth
+                  </label>
+                </div>
+                <div class="form-control w-full">
+                  <label className="font-bold font-sans mx-2 text-primary">
+                    Transaction ID
+                  </label>
+                  <input
+                    {...register("Transaction ID", {
+                      required: {
+                        value: true,
+                        message: "Transaction ID is Required",
+                      },
+                    })}
+                    type="text"
+                    placeholder="Transaction ID"
+                    className={`input mt-2 ${
+                      errors.name?.type === "required"
+                        ? "border-secondary"
+                        : "input-bordered border-2"
+                    }`}
+                  />
+                  {errors.name?.type === "required" && (
+                    <span class="label-text-alt text-red-600 mt-4">
+                      {errors.name?.message}
+                    </span>
+                  )}
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
             {payment === "online" ? (
               <div className="font-sans font-bold">
                 <label className="font-bold font-sans mx-2 text-primary ">
@@ -606,75 +680,64 @@ const GmailRegister = () => {
                   </label>
                 </div>
                 <div class="form-control w-full my-6">
-            <label className="font-bold font-sans mx-2 text-primary">
-              Transaction ID
-            </label>
-            <input
-              {...register("Transaction ID", {
-                required: {
-                  value: true,
-                  message: "Transaction ID is Required",
-                },
-              })}
-              type="text"
-              placeholder="Transaction ID"
-              className={`input mt-2 ${
-                errors.name?.type === "required"
-                  ? "border-secondary"
-                  : "input-bordered border-2"
-              }`}
-            />
-            {errors.name?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
-                {errors.name?.message}
-              </span>
-            )}
-          </div>
+                  <label className="font-bold font-sans mx-2 text-primary">
+                    Transaction ID
+                  </label>
+                  <input
+                    {...register("Transaction ID", {
+                      required: {
+                        value: true,
+                        message: "Transaction ID is Required",
+                      },
+                    })}
+                    type="text"
+                    placeholder="Transaction ID"
+                    className={`input mt-2 ${
+                      errors.name?.type === "required"
+                        ? "border-secondary"
+                        : "input-bordered border-2"
+                    }`}
+                  />
+                  {errors.name?.type === "required" && (
+                    <span class="label-text-alt text-red-600 mt-4">
+                      {errors.name?.message}
+                    </span>
+                  )}
+                </div>
               </div>
             ) : (
               ""
             )}
           </div>
-
-          {/* <div class="form-control w-full">
+          <div class="form-control w-full my-6">
+            <label className="font-bold font-sans mx-2 text-primary">
+              Choose a decent image
+            </label>
             <input
-              {...register("password", {
-                minLength: {
-                  value: 6,
-                  message: "too short",
-                },
+              {...register("image", {
                 required: {
                   value: true,
-                  message: "Password is Required",
+                  message: "image is Required",
                 },
               })}
-              type="password"
-              placeholder="Your password"
-              className={`input placeholder-primary placeholder:text-lg placeholder:font-bold ${
-                errors.password?.type === "required" ||
-                errors.password?.type === "minLength"
+              type="file"
+              className={`input ${
+                errors.image?.type === "required"
                   ? "border-secondary"
                   : "input-bordered border-2"
               }`}
             />
-            {errors.password?.type === "required" && (
-              <span class="label-text-alt text-red-600 my-4">
-                {errors.password?.message}
+            {errors.image?.type === "required" && (
+              <span class="label-text-alt text-red-600 mt-4">
+                {errors.image?.message}
               </span>
             )}
-            {errors.password?.type === "minLength" && (
-              <span class="label-text-alt text-red-600 my-4">
-                {errors.password?.message}
-              </span>
-            )}
-          </div>  */}
-
+          </div>
           <button
-            className="btn btn-primary w-full text-white my-12"
+            className="btn btn-primary font-sans font-bold text-lg w-full text-white my-8"
             type="submit"
-            value="LogIn"
           >
-            Register
+            Submit your form
           </button>
         </form>
       </div>
