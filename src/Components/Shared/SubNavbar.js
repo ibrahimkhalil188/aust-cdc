@@ -8,7 +8,7 @@ const SubNavbar = () => {
 
   return (
     <div id="TopSection">
-      <div className="h-8 w-full bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
+      <div className="h-8 w-full font-sans bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
         
         <div className="flex justify-between items-center px-6 lg:px-12">
           <div className="flex items-center justify-center mt-1 text-white">

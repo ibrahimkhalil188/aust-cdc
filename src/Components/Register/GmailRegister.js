@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import logo from "../../Assets/Logo/austlogo.png";
 const GmailRegister = () => {
   const [other, setOther] = useState(false);
   const [payment, setPayment] = useState("");
@@ -32,10 +33,13 @@ const GmailRegister = () => {
   };
 
   return (
-    <div className="w-full bg-primary mt-12 p-4">
+    <div className="w-full bg-primary mt-12 p-4 py-24">
       <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
-        <h1 className="text-4xl text-center uppercase text-primary pt-4">
-          Register yourself
+        <div className="flex justify-center pt-12">
+        <img className="w-72" src={logo} alt="" />
+        </div>
+        <h1 className="text-4xl font-sans font-bold text-center uppercase text-primary pt-4 pb-12">
+          <span className="text-secondary">Register</span> yourself
         </h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className="font-sans font-bold mx-6 lg:mx-24 my-6">
@@ -234,7 +238,7 @@ const GmailRegister = () => {
 
           <div class="form-control w-full my-6 relative">
             <label className="font-bold font-sans mx-2 text-primary">
-              Birth date
+              Date of birth
             </label>
             <input
               {...register("birthDate", {
@@ -282,20 +286,26 @@ const GmailRegister = () => {
               <option className="text-lg font-sans" Value="A+">
                 A+
               </option>
+              <option className="text-lg font-sans" Value="A-">
+                A-
+              </option>
               <option className="text-lg font-sans" Value="B+">
                 B+
               </option>
+              <option className="text-lg font-sans" Value="B-">
+                B-
+              </option>
               <option className="text-lg font-sans" Value="O+">
                 O+
+              </option>
+              <option className="text-lg font-sans" Value="O-">
+                O-
               </option>
               <option className="text-lg font-sans" Value="AB+">
                 AB+
               </option>
               <option className="text-lg font-sans" Value="AB-">
                 AB-
-              </option>
-              <option className="text-lg font-sans" Value="A-">
-                A-
               </option>
             </select>
             {errors.semester?.type === "required" && (
@@ -573,53 +583,12 @@ const GmailRegister = () => {
                       },
                     })}
                     type="radio"
-                    value="Cash"
-                    name="onlinePayment"
-                  />
-                  <label for="onlinePayment" className="ml-2">
-                    Cash
-                  </label>
-                </div>
-                <div className="ml-6">
-                  <input
-                    {...register("radio", {
-                      required: {
-                        value: "onlinePayment",
-                        message: "radio is required",
-                      },
-                    })}
-                    type="radio"
                     value="Booth"
                     name="onlinePayment"
                   />
                   <label for="onlinePayment" className="ml-2">
                     Booth
                   </label>
-                </div>
-                <div class="form-control w-full">
-                  <label className="font-bold font-sans mx-2 text-primary">
-                    Transaction ID
-                  </label>
-                  <input
-                    {...register("Transaction ID", {
-                      required: {
-                        value: true,
-                        message: "Transaction ID is Required",
-                      },
-                    })}
-                    type="text"
-                    placeholder="Transaction ID"
-                    className={`input mt-2 ${
-                      errors.name?.type === "required"
-                        ? "border-secondary"
-                        : "input-bordered border-2"
-                    }`}
-                  />
-                  {errors.name?.type === "required" && (
-                    <span class="label-text-alt text-red-600 mt-4">
-                      {errors.name?.message}
-                    </span>
-                  )}
                 </div>
               </div>
             ) : (

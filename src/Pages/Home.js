@@ -16,8 +16,8 @@ const Home = () => {
       <AustCdcPillers></AustCdcPillers>
       <AboutWithLogo></AboutWithLogo>
       <AboutAust></AboutAust>
-      <EventWithFixedBg></EventWithFixedBg>
       <LatestNews></LatestNews>
+      <EventWithFixedBg></EventWithFixedBg>
       <Affiliation></Affiliation>
     </div>
   );

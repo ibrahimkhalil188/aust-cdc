@@ -30,12 +30,12 @@ const Navbar = () => {
     */}
 
         <nav className="lg:hidden md:hidden">
-          <div className="flex justify-between items-center mx-6">
+          <div className="flex justify-between items-center mx-6 py-2">
             <div>
               <img className="w-32" src={logo} alt="" />
             </div>
             <div>
-              <h1 onClick={() => setOpen(!open)}>{!open ? <AiOutlineMenu className="text-4xl text-primary"></AiOutlineMenu> : <AiOutlineClose className="text-4xl text-secondary"></AiOutlineClose>}</h1>
+              <h1 onClick={() => setOpen(!open)}>{!open ? <AiOutlineMenu className="text-3xl text-primary"></AiOutlineMenu> : <AiOutlineClose className="text-3xl text-secondary"></AiOutlineClose>}</h1>
             </div>
           </div>
           <div className={`${!open?"hidden":"block"} absolute right-0 bg-white w-full px-4`}>

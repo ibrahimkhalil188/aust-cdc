@@ -13,8 +13,8 @@ import { EmailJs } from "./Emailjs";
 import SubFooter from "./SubFooter";
 const Footer = () => {
   return (
-    <div className="mt-12 bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
-      <footer className=" lg:flex p-10 text-white lg:App">
+    <div className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
+      <footer className=" lg:flex p-10 text-white 2xl:w-[1350px] mx-auto">
         <div className="lg:w-[35%] mr-[5%]">
           <div>
             <div className="flex flex-row">
