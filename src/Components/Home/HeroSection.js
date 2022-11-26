@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
  
-    <div className="absolute flex justify-center w-full top-[20%] lg:top-[40vh] z-10">
+    <div className="absolute flex justify-center items-center h-1/2 lg:h-full w-full top-10 z-10" >
    <div>
    <h1 className="text-3xl lg:text-[110px] text-center font-bold"><span className="text-white">CAREER THAT</span> <span className="text-secondary">MATTER</span></h1>
       <div className="flex justify-center">
