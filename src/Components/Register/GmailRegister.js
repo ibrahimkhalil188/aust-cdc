@@ -1,48 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import logo from "../../Assets/Logo/austlogo.png";
 const GmailRegister = () => {
+  const [userData, setUserDAta] = useState(" ")
   const [other, setOther] = useState(false);
   const [payment, setPayment] = useState("");
-  const ImageStorageKey = "5cb95fcec85252f31df0df859b7fc24a"
+  const ImageStorageKey = "5cb95fcec85252f31df0df859b7fc24a";
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm({
     defaultValues: {
-      checkbox: [],
-      radio: "",
+      interest: [],
+      payment: "",
+      onlinePayment: "",
     },
   });
   const onSubmit = (data) => {
-    const image =data.image[0];
+    const image = data.image[0];
     const formData = new FormData();
-    formData.append("image",image);
-    const url =`https://api.imgbb.com/1/upload?key=${ImageStorageKey}`
-    fetch(url,{
-      method:'POST',
-      body:formData
+    formData.append("image", image);
+    const url = `https://api.imgbb.com/1/upload?key=${ImageStorageKey}`;
+    fetch(url, {
+      method: "POST",
+      body: formData,
     })
-    .then(res=>res.json())
-    .then(result=>{
-      if(result.success){
-        data={...data,image:result.data.url}
-      }
-    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.success) {
+          data = { ...data, image: result.data.url,status:"pending" };
+          console.log(result.data.url);
+          setUserDAta(data);
+          reset()
+        }
+      });
   };
+
+  useEffect(()=>{
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          toast.success("Your registered successfully");
+        }
+      });
+  },[userData])
 
   return (
     <div className="w-full bg-primary mt-12 p-4 py-24">
       <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
         <div className="flex justify-center pt-12">
-        <img className="w-72" src={logo} alt="" />
+          <img className="w-72" src={logo} alt="" />
         </div>
         <h1 className="text-4xl font-sans font-bold text-center uppercase text-primary pt-4 pb-12">
           <span className="text-secondary">Register</span> yourself
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="font-sans font-bold mx-6 lg:mx-24 my-6">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="font-sans font-bold mx-6 lg:mx-24 my-6"
+        >
           {/* Avatar or profile image */}
           <div class="form-control w-full my-6">
             <label className="font-bold font-sans mx-2 text-primary">
@@ -121,9 +148,7 @@ const GmailRegister = () => {
                   : "input-bordered border-2"
               }`}
             >
-              <option className="text-lg font-sans" value="">
-                
-              </option>
+              <option className="text-lg font-sans" value=""></option>
               <option className="text-lg font-sans" Value="Architecture">
                 Architecture
               </option>
@@ -199,8 +224,7 @@ const GmailRegister = () => {
                   : "input-bordered border-2"
               }`}
             >
-              <option className="text-lg font-sans" defaultValue="">
-              </option>
+              <option className="text-lg font-sans" defaultValue=""></option>
               <option className="text-lg font-sans" Value="1/1">
                 1/1
               </option>
@@ -280,9 +304,7 @@ const GmailRegister = () => {
                   : "input-bordered border-2"
               }`}
             >
-              <option className="text-lg font-sans" defaultValue="">
-               
-              </option>
+              <option className="text-lg font-sans" defaultValue=""></option>
               <option className="text-lg font-sans" Value="A+">
                 A+
               </option>
@@ -532,7 +554,7 @@ const GmailRegister = () => {
             <br />
             <div className="mx-6">
               <input
-                {...register("radio", {
+                {...register("payment", {
                   required: {
                     value: "payment",
                     message: "radio is required",
@@ -549,7 +571,7 @@ const GmailRegister = () => {
                 Online
               </label>
               <input
-                {...register("radio", {
+                {...register("payment", {
                   required: {
                     value: "payment",
                     message: "radio is required",
@@ -576,17 +598,17 @@ const GmailRegister = () => {
                 <br />
                 <div className="ml-6">
                   <input
-                    {...register("radio", {
+                    {...register("cash", {
                       required: {
-                        value: "onlinePayment",
+                        value: "cash",
                         message: "radio is required",
                       },
                     })}
                     type="radio"
                     value="Booth"
-                    name="onlinePayment"
+                    name="cash"
                   />
-                  <label for="onlinePayment" className="ml-2">
+                  <label for="cash" className="ml-2">
                     Booth
                   </label>
                 </div>
@@ -602,7 +624,7 @@ const GmailRegister = () => {
                 <br />
                 <div className="ml-6">
                   <input
-                    {...register("radio", {
+                    {...register("onlinePayment", {
                       required: {
                         value: "onlinePayment",
                         message: "radio is required",
@@ -618,7 +640,7 @@ const GmailRegister = () => {
                 </div>
                 <div className="ml-6">
                   <input
-                    {...register("radio", {
+                    {...register("onlinePayment", {
                       required: {
                         value: "onlinePayment",
                         message: "radio is required",
@@ -634,7 +656,7 @@ const GmailRegister = () => {
                 </div>
                 <div className="ml-6">
                   <input
-                    {...register("radio", {
+                    {...register("onlinePayment", {
                       required: {
                         value: "onlinePayment",
                         message: "radio is required",

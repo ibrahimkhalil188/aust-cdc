@@ -7,6 +7,7 @@ import Navbar from "./Components/Shared/Navbar";
 import NotFound from "./Components/Shared/NotFound";
 import SubNavbar from "./Components/Shared/SubNavbar";
 import About from "./Pages/About";
+import Admin from "./Pages/Admin";
 import AdvisorsPanel from "./Pages/AdvisorPanel";
 import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
@@ -39,7 +40,9 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/login" element={<LogIn></LogIn>}></Route>
         <Route path="/advisorPanel" element={<AdvisorsPanel></AdvisorsPanel>}></Route>
+        <Route path="/admin" element={<Admin></Admin>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
+        
       </Routes>
       <Footer></Footer>
       <ToastContainer />
