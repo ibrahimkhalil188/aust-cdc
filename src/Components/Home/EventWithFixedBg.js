@@ -72,16 +72,16 @@ const EventWithFixedBg = () => {
           
           {event.map((singleEvent) => (
             <SwiperSlide key={singleEvent.id}>
-              <div className="lg:flex border-4 border-white rounded-2xl w-full m-4 lg:m-12 py-[-120px] h-[70vh] ">
+              <div className="2xl:w-[1300px] lg:flex border-4 border-white rounded-2xl w-full m-4 lg:m-12 py-[-120px] 2xl:h-[60vh] h-[70vh] ">
                 <div className="w-full lg:w-1/2  flex justify-center items-center">
-                  <div className=" lg:w-[380px] lg:h-[380px]  ">
+                  <div className=" w-96 h-72 lg:w-[380px] lg:h-[380px]  ">
                   <img className="p-2" src={singleEvent.image} alt="" />
                   </div>
                 </div>
-                <div className="flex justify-center mt-12 text-justify mr-12 w-full lg:w-1/2 text-white">
+                <div className="flex justify-center mt-12 text-justify mr-12 w-full lg:w-1/2 text-white ">
                   <div>
-                  <h1 className="text-4xl mb-8 font-sans font-bold">{singleEvent.title}</h1>
-                  <p className="text-lg font-sans">{singleEvent.des}</p>
+                  <h1 className="text-4xl mb-8 font-sans font-bold mx-4 lg:mx-0">{singleEvent.title}</h1>
+                  <p className="text-lg font-sans mx-4 lg:mx-0">{singleEvent.des}</p>
                   </div>
                 </div>
               </div>
