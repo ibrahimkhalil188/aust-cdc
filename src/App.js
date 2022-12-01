@@ -13,10 +13,13 @@ import CaptureCollection from "./Pages/CaptureCollection";
 import ClubStructure from "./Pages/ClubStructure";
 import Contact from "./Pages/Contact";
 import Event from "./Pages/Event";
-import Executive from "./Pages/Executive";
+import Fall21ExecutiveBody from "./Pages/Fall21ExicutiveBody";
+import Fall21SubExecutiveBody from "./Pages/Fall21SubExecutiveBody";
 import Home from "./Pages/Home";
 import LogIn from "./Pages/LogIn";
 import Register from "./Pages/Register";
+import Spring21ExecutiveBody from "./Pages/Spring21ExecutiveBody";
+import Spring21SubExecutiveBody from "./Pages/Spring21SubExecutiveBody";
 function App() {
   return (
     <div>
@@ -26,7 +29,10 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
-        <Route path="/executive" element={<Executive></Executive>}></Route>
+        <Route path="/Fall21Executive" element={<Fall21ExecutiveBody></Fall21ExecutiveBody>}></Route>
+        <Route path="/Fall21SubExecutive" element={<Fall21SubExecutiveBody></Fall21SubExecutiveBody>}></Route>
+        <Route path="/Spring21Executive" element={<Spring21ExecutiveBody></Spring21ExecutiveBody>}></Route>
+        <Route path="/Spring21SubExecutive" element={<Spring21SubExecutiveBody></Spring21SubExecutiveBody>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route
           path="/clubStructure"

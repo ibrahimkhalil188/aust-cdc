@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import logo from "../../Assets/Logo/austlogo.png";
+import auth from "../../firebase.init";
 const GmailRegister = () => {
   const [userData, setUserDAta] = useState(" ")
   const [other, setOther] = useState(false);
@@ -19,8 +21,22 @@ const GmailRegister = () => {
       onlinePayment: "",
     },
   });
+
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+  const [getUser, userloading, usererror] = useAuthState(auth);
   const onSubmit = (data) => {
-    const image = data.image[0];
+    const password = data.name+(Math.floor(Math.random(100)*100000000)+1);
+    createUserWithEmailAndPassword(data.email,password)
+    if(userloading)
+      return <p>loading</p>
+    if(getUser){
+      console.log(getUser);
+      const image = data.image[0];
     const formData = new FormData();
     formData.append("image", image);
     const url = `https://api.imgbb.com/1/upload?key=${ImageStorageKey}`;
@@ -31,31 +47,57 @@ const GmailRegister = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.success) {
-          data = { ...data, image: result.data.url,status:"pending" };
+          data = { ...data, image: result.data.url,status:"pending",onetimePass:password};
           console.log(result.data.url);
           setUserDAta(data);
-          reset()
+          //reset()
         }
       });
+    }
+    else{
+      toast.error(error.message)
+    }
   };
+  console.log(getUser)
+    useEffect(()=>{
+      console.log(getUser)
+      if(!usererror){
+        fetch("http://localhost:5000/users", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.acknowledged) {
+            toast.success("Your registered successfully");
+          }
+        });
+      }
+    },[userData,getUser])
 
-  useEffect(()=>{
-    fetch("http://localhost:5000/users", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(userData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.acknowledged) {
-          toast.success("Your registered successfully");
-        }
-      });
-  },[userData])
-
+    // email user chceking
+    if (error) {
+      return (
+        <div>
+          <p>Error: {error.message}</p>
+        </div>
+      );
+    }
+    if (loading) {
+      return <p>Loading...</p>;
+    }
+    if (user) {
+      return (
+        <div>
+          <p>Registered User: {user.user.email}</p>
+        </div>
+      );
+    }
+  
   return (
     <div className="w-full bg-primary mt-12 p-4 py-24">
       <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">

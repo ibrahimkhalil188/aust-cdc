@@ -137,11 +137,11 @@ const Navbar = () => {
                     <li className="fall21">
                       Fall 21 panel
                       <ul className="dropdown-2 bg-white text-primary">
-                        <Link to="/executive" className="my-2">
+                        <Link to="/Fall21Executive" className="my-2">
                           <li>Executive Body</li>
                         </Link>
 
-                        <Link to="/subExecutive" className="my-2 ">
+                        <Link to="/Fall21SubExecutive" className="my-2 ">
                           <li>Sub-Executive Body</li>
                         </Link>
                       </ul>
@@ -149,11 +149,11 @@ const Navbar = () => {
                     <li className="spring21">
                       Spring 21 panel
                       <ul className="dropdown-3 bg-white text-primary">
-                        <Link to="/executive" className="my-2">
+                        <Link to="/Spring21Executive" className="my-2">
                           <li>Executive Body</li>
                         </Link>
 
-                        <Link to="/subExecutive" className="my-2 ">
+                        <Link to="/Spring21SubExecutive" className="my-2 ">
                           <li>Sub-Executive Body</li>
                         </Link>
                       </ul>
