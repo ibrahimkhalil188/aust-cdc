@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { HashLink, HashLink as Link } from "react-router-hash-link";
 import logo from "../../Assets/Logo/austlogo.png";
 import homeIcon from "../../Assets/Logo/home_red.png";
 import "../../Style/Navbar.style.css";
@@ -137,9 +137,9 @@ const Navbar = () => {
                     <li className="fall21">
                       Fall 21 panel
                       <ul className="dropdown-2 bg-white text-primary">
-                        <Link to="/Fall21Executive" className="my-2">
+                        <HashLink smooth to="/Fall21Executive#topSection" className="my-2">
                           <li>Executive Body</li>
-                        </Link>
+                        </HashLink>
 
                         <Link to="/Fall21SubExecutive" className="my-2 ">
                           <li>Sub-Executive Body</li>
@@ -149,7 +149,7 @@ const Navbar = () => {
                     <li className="spring21">
                       Spring 21 panel
                       <ul className="dropdown-3 bg-white text-primary">
-                        <Link to="/Spring21Executive" className="my-2">
+                        <Link to="/Spring21Executive#topSection" className="my-2">
                           <li>Executive Body</li>
                         </Link>
 

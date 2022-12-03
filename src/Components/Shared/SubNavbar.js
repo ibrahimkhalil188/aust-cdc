@@ -10,7 +10,7 @@ const SubNavbar = () => {
     <div id="TopSection">
       <div className="h-8 w-full font-sans bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#0f0c29]">
         
-        <div className="flex justify-between items-center px-6 lg:px-12">
+        <div className="flex justify-between items-center px-4 lg:px-12">
           <div className="flex items-center justify-center mt-1 text-white">
             <span className="hidden lg:block uppercase font-bold text-[10px]">contact us</span>
             <a href="https://www.facebook.com/" target="blank"><FaFacebookSquare className="mx-1 text-md lg:ml-4 hover:scale-125"></FaFacebookSquare></a>
@@ -20,11 +20,10 @@ const SubNavbar = () => {
             <a href="https://www.facebook.com/" target="blank"><FaInstagramSquare className="mx-1 text-md  hover:scale-125"></FaInstagramSquare></a>
             <a href="https://www.facebook.com/" target="blank"><IoLogoYoutube className="mx-1 text-md  hover:scale-125"></IoLogoYoutube></a>
           </div>
-          <div className="flex justify-center items-center mt-1  lg:mr-[-24px] text-white lg:text-sm  space-x-2 tracking-wider cursor-pointer">
-          <Link to="/admin"><span className="hover:text-secondary">admin</span></Link>
-            <Link to="/login"><span className="hover:text-secondary">Sign in</span></Link>
-            <div className="w-[.5px] bg-white h-4 mx-4"></div>
-            <Link to="/register"><span className="hover:text-secondary">Sign up</span></Link>
+          <div className="flex justify-center items-center mt-1 text-white cursor-pointer">
+            <Link to="/login"><span >Sign in</span></Link>
+            <div className="w-[.5px] bg-white h-4 mx-2"></div>
+            <Link to="/register"><span>Sign up</span></Link>
           </div>
         </div>
       </div>
