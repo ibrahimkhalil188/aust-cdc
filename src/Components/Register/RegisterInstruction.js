@@ -3,10 +3,10 @@ import React from "react";
 const RegisterInstruction = () => {
   return (
     <div>
-      <div className=" bg-primary skew-y-12 mt-48">
+      <div className=" bg-primary skew-y-12 mt-16 lg:mt-48">
         <div className="text-white text-4xl -skew-y-12 text-center">
           <h1 className="pt-12">Instruction set</h1>
-          <p className="mx-32 py-12 pb-24">
+          <p className=" mx-6 lg:mx-32 py-12 pb-24">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
             asperiores. Reprehenderit asperiores eius molestias quia, explicabo
             ducimus quidem tenetur maiores mollitia magnam consequuntur

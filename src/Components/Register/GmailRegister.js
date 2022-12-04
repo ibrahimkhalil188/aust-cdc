@@ -58,9 +58,7 @@ const GmailRegister = () => {
       toast.error(error.message)
     }
   };
-  console.log(getUser)
     useEffect(()=>{
-      console.log(getUser)
       if(!usererror){
         fetch("http://localhost:5000/users", {
         method: "POST",
@@ -77,7 +75,7 @@ const GmailRegister = () => {
           }
         });
       }
-    },[userData,getUser])
+    },[userData,getUser,usererror])
 
     // email user chceking
     if (error) {
@@ -113,7 +111,7 @@ const GmailRegister = () => {
           className="font-sans font-bold mx-6 lg:mx-24 my-6"
         >
           {/* Avatar or profile image */}
-          <div class="form-control w-full my-6">
+          <div className="form-control w-full my-6">
             <label className="font-bold font-sans mx-2 text-primary">
               Email ID
             </label>
@@ -137,18 +135,18 @@ const GmailRegister = () => {
               }`}
             />
             {errors.email?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.email?.message}
               </span>
             )}
             {errors.email?.type === "pattern" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.email?.message}
               </span>
             )}
           </div>
 
-          <div class="form-control w-full my-6">
+          <div className="form-control w-full my-6">
             <label className="font-bold font-sans mx-2 text-primary">
               Name
             </label>
@@ -167,7 +165,7 @@ const GmailRegister = () => {
               }`}
             />
             {errors.name?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.name?.message}
               </span>
             )}
@@ -217,13 +215,13 @@ const GmailRegister = () => {
               </option>
             </select>
             {errors.department?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.department?.message}
               </span>
             )}
           </div>
 
-          <div class="form-control w-full my-6">
+          <div className="form-control w-full my-6">
             <label className="font-bold font-sans mx-2 text-primary">
               Student ID
             </label>
@@ -242,7 +240,7 @@ const GmailRegister = () => {
               }`}
             />
             {errors.id?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.id?.message}
               </span>
             )}
@@ -296,13 +294,13 @@ const GmailRegister = () => {
               </option>
             </select>
             {errors.semester?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.semester?.message}
               </span>
             )}
           </div>
 
-          <div class="form-control w-full my-6 relative">
+          <div className="form-control w-full my-6 relative">
             <label className="font-bold font-sans mx-2 text-primary">
               Date of birth
             </label>
@@ -322,7 +320,7 @@ const GmailRegister = () => {
               }`}
             />
             {errors.birthDate?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.birthDate?.message}
               </span>
             )}
@@ -373,7 +371,7 @@ const GmailRegister = () => {
               </option>
             </select>
             {errors.semester?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.semester?.message}
               </span>
             )}
@@ -393,10 +391,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa01"
                     type="checkbox"
                     value="Arts & Illustration"
                   />
-                  <label for="fname" className="ml-2">
+                  <label htmlFor="fa01" className="ml-2">
                     Arts & Illustration
                   </label>
                 </div>
@@ -408,10 +407,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa02"
                     type="checkbox"
                     value="Innovation & Business Idea"
                   />
-                  <label for="lname" className="ml-2">
+                  <label htmlFor="fa02" className="ml-2">
                     Innovation & Business Idea
                   </label>
                 </div>
@@ -423,10 +423,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa03"
                     type="checkbox"
                     value="Event Management"
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa03" className="ml-2">
                     Event Management
                   </label>
                 </div>
@@ -438,10 +439,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa04"
                     type="checkbox"
                     value="Graphic Design"
                   />
-                  <label for="fname" className="ml-2">
+                  <label htmlFor="fa04" className="ml-2">
                     Graphic Design
                   </label>
                 </div>
@@ -453,10 +455,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa05"
                     type="checkbox"
                     value="Graphic Design"
                   />
-                  <label for="lname" className="ml-2">
+                  <label htmlFor="fa05" className="ml-2">
                     Graphic Design
                   </label>
                 </div>
@@ -468,10 +471,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa06"
                     type="checkbox"
                     value="Animation"
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa06" className="ml-2">
                     Animation
                   </label>
                 </div>
@@ -483,10 +487,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa07"
                     type="checkbox"
                     value="Web design"
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa07" className="ml-2">
                     Web design
                   </label>
                 </div>
@@ -498,11 +503,12 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa08"
                     type="checkbox"
                     value="Case Study
                  "
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa08" className="ml-2">
                     Case Study
                   </label>
                 </div>
@@ -514,10 +520,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa09"
                     type="checkbox"
                     value="Public Speaking"
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa09" className="ml-2">
                     Public Speaking
                   </label>
                 </div>
@@ -529,10 +536,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa10"
                     type="checkbox"
                     value="Content Writing"
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa10" className="ml-2">
                     Content Writing
                   </label>
                 </div>
@@ -544,10 +552,11 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa11"
                     type="checkbox"
                     value="Marketing"
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa11" className="ml-2">
                     Marketing
                   </label>
                 </div>
@@ -559,11 +568,12 @@ const GmailRegister = () => {
                         message: "checkbox is required",
                       },
                     })}
+                    id="fa12"
                     type="checkbox"
                     value="Others"
                     onClick={() => setOther(!other)}
                   />
-                  <label for="email" className="ml-2">
+                  <label htmlFor="fa12" className="ml-2">
                     Others
                   </label>
                   {other ? (
@@ -583,7 +593,7 @@ const GmailRegister = () => {
               </div>
             </fieldset>
             {errors.checkbox?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.checkbox?.message}
               </span>
             )}
@@ -607,12 +617,12 @@ const GmailRegister = () => {
                 onClick={() => setPayment("online")}
               />
               <label
-                for="payment"
+                htmlFor="online"
                 className="ml-1 mr-8 font-sans font-bold text-md uppercase"
               >
                 Online
               </label>
-              <input
+              <input id="online"
                 {...register("payment", {
                   required: {
                     value: "payment",
@@ -624,7 +634,7 @@ const GmailRegister = () => {
                 onClick={() => setPayment("offline")}
               />
               <label
-                for="payment"
+                htmlFor="payment"
                 className="ml-1 font-sans font-bold text-md uppercase"
               >
                 Offline
@@ -650,7 +660,7 @@ const GmailRegister = () => {
                     value="Booth"
                     name="cash"
                   />
-                  <label for="cash" className="ml-2">
+                  <label htmlFor="cash" className="ml-2">
                     Booth
                   </label>
                 </div>
@@ -676,7 +686,7 @@ const GmailRegister = () => {
                     value="Bkash"
                     name="onlinePayment"
                   />
-                  <label for="onlinePayment" className="ml-2">
+                  <label htmlFor="onlinePayment" className="ml-2">
                     Bkash
                   </label>
                 </div>
@@ -692,7 +702,7 @@ const GmailRegister = () => {
                     value="Nagad"
                     name="onlinePayment"
                   />
-                  <label for="onlinePayment" className="ml-2">
+                  <label htmlFor="onlinePayment" className="ml-2">
                     Nagad
                   </label>
                 </div>
@@ -708,11 +718,11 @@ const GmailRegister = () => {
                     value="Rocket"
                     name="onlinePayment"
                   />
-                  <label for="onlinePayment" className="ml-2">
+                  <label htmlFor="onlinePayment" className="ml-2">
                     Rocket
                   </label>
                 </div>
-                <div class="form-control w-full my-6">
+                <div className="form-control w-full my-6">
                   <label className="font-bold font-sans mx-2 text-primary">
                     Transaction ID
                   </label>
@@ -732,7 +742,7 @@ const GmailRegister = () => {
                     }`}
                   />
                   {errors.name?.type === "required" && (
-                    <span class="label-text-alt text-red-600 mt-4">
+                    <span className="label-text-alt text-red-600 mt-4">
                       {errors.name?.message}
                     </span>
                   )}
@@ -742,7 +752,7 @@ const GmailRegister = () => {
               ""
             )}
           </div>
-          <div class="form-control w-full my-6">
+          <div className="form-control w-full my-6">
             <label className="font-bold font-sans mx-2 text-primary">
               Choose a decent image
             </label>
@@ -761,7 +771,7 @@ const GmailRegister = () => {
               }`}
             />
             {errors.image?.type === "required" && (
-              <span class="label-text-alt text-red-600 mt-4">
+              <span className="label-text-alt text-red-600 mt-4">
                 {errors.image?.message}
               </span>
             )}

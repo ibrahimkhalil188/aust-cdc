@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaFacebookSquare } from 'react-icons/fa';
 const MemberCard = ({membersDAta}) => {
     return (
         <div>
@@ -9,7 +9,13 @@ const MemberCard = ({membersDAta}) => {
          
           <div className="card-body">
             <h2 className="text-center text-4xl">{membersDAta.name}</h2>
+            <h2 className="text-center text-4xl">{membersDAta.title}</h2>
             <p>{membersDAta.about}</p>
+            <div className='flex justify-center text-primary'>
+            <a href={membersDAta.facebookUrl} target="blank"><FaFacebookSquare className="mx-1 text-xl lg:ml-4 hover:scale-125"></FaFacebookSquare></a>
+            <a href={membersDAta.facebookUrl} target="blank"><FaFacebookSquare className="mx-1 text-xl lg:ml-4 hover:scale-125"></FaFacebookSquare></a>
+            <a href={membersDAta.facebookUrl} target="blank"><FaFacebookSquare className="mx-1 text-xl lg:ml-4 hover:scale-125"></FaFacebookSquare></a>
+            </div>
           </div>
         </div>
         </div>
