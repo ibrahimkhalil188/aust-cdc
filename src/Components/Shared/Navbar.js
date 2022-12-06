@@ -163,9 +163,9 @@ const Navbar = () => {
           >
             <div>
               <ul className="flex items-center">
-                <Link to="/">
+                <HashLink to="/home#topSection">
                   <li className="my-2 cursor-pointer ">Home</li>
-                </Link>
+                </HashLink>
 
                 <ul className="dropdown cursor-pointer ">
                   <li> Governing Panel</li>
@@ -177,21 +177,21 @@ const Navbar = () => {
                           <li>Executive Body</li>
                         </HashLink>
 
-                        <Link to="/Fall21SubExecutive" className="my-2 ">
+                        <HashLink to="/Fall21SubExecutive#topSection" className="my-2 ">
                           <li>Sub-Executive Body</li>
-                        </Link>
+                        </HashLink>
                       </ul>
                     </li>
                     <li className="spring21">
                       Spring 21 panel
                       <ul className="dropdown-3 bg-white text-primary">
-                        <Link to="/Spring21Executive#topSection" className="my-2">
+                        <HashLink to="/Spring21Executive#topSection" className="my-2">
                           <li>Executive Body</li>
-                        </Link>
+                        </HashLink>
 
-                        <Link to="/Spring21SubExecutive" className="my-2 ">
+                        <HashLink to="/Spring21SubExecutive#topSection" className="my-2 ">
                           <li>Sub-Executive Body</li>
-                        </Link>
+                        </HashLink>
                       </ul>
                     </li>
                   </ul>
@@ -211,15 +211,15 @@ const Navbar = () => {
             </div>
             <div className="">
               <ul className="flex items-center">
-                <Link to="/captureCollection">
+                <HashLink to="/captureCollection#topSection">
                   <li className="my-2 cursor-pointer ">Preeminenece gallery</li>
-                </Link>{" "}
-                <Link to="/event">
+                </HashLink>{" "}
+                <HashLink to="/event#topSection">
                   <li>Event</li>
-                </Link>
-                <Link to="contact">
+                </HashLink>
+                <HashLink to="contact#topSection">
                   <li className="my-2  cursor-pointer ">Contact Info</li>
-                </Link>
+                </HashLink>
               </ul>
             </div>
           </nav>

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import logo from "../../Assets/Logo/austlogo.png";
 import auth from "../../firebase.init";
+import LoadingSpinner from "../Shared/LoadingSpinner";
 const GmailRegister = () => {
   const [userData, setUserDAta] = useState(" ")
   const [other, setOther] = useState(false);
   const [payment, setPayment] = useState("");
-  const ImageStorageKey = "5cb95fcec85252f31df0df859b7fc24a";
+  const ImageStorageKey = "061586b1ffa305eaa49cd86d4b62eea7";
   const {
     register,
     handleSubmit,
@@ -16,7 +17,6 @@ const GmailRegister = () => {
     reset
   } = useForm({
     defaultValues: {
-      interest: [],
       payment: "",
       onlinePayment: "",
     },
@@ -28,39 +28,40 @@ const GmailRegister = () => {
     loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
-  const [getUser, userloading, usererror] = useAuthState(auth);
   const onSubmit = (data) => {
-    const password = data.name+(Math.floor(Math.random(100)*100000000)+1);
+    const password ="#$"+(Math.floor(Math.random(100)*100000000)+1)+"%@";
     createUserWithEmailAndPassword(data.email,password)
-    if(userloading)
-      return <p>loading</p>
-    if(getUser){
-      console.log(getUser);
+   if(loading){
+    return <LoadingSpinner></LoadingSpinner>
+   }
+    if(error){
+      toast.error(error?.message)
+    }else{
       const image = data.image[0];
-    const formData = new FormData();
-    formData.append("image", image);
-    const url = `https://api.imgbb.com/1/upload?key=${ImageStorageKey}`;
-    fetch(url, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.success) {
-          data = { ...data, image: result.data.url,status:"pending",onetimePass:password};
-          console.log(result.data.url);
-          setUserDAta(data);
-          //reset()
-        }
-      });
+      const formData = new FormData();
+      formData.append("image", image);
+      const url = `https://api.imgbb.com/1/upload?key=${ImageStorageKey}`;
+      fetch(url, {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.success) {
+            data = { ...data, image: result.data.url,status:"pending",onetimePass:password};
+            console.log(result.data.url);
+            setUserDAta(data);
+            reset()
+          }
+        });
     }
-    else{
-      toast.error(error.message)
+      
     }
-  };
     useEffect(()=>{
-      if(!usererror){
-        fetch("http://localhost:5000/users", {
+        if(error){
+          toast.error(error?.message)
+        }else{
+          fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -74,28 +75,9 @@ const GmailRegister = () => {
             toast.success("Your registered successfully");
           }
         });
-      }
-    },[userData,getUser,usererror])
+        }
+    },[userData,error])
 
-    // email user chceking
-    if (error) {
-      return (
-        <div>
-          <p>Error: {error.message}</p>
-        </div>
-      );
-    }
-    if (loading) {
-      return <p>Loading...</p>;
-    }
-    if (user) {
-      return (
-        <div>
-          <p>Registered User: {user.user.email}</p>
-        </div>
-      );
-    }
-  
   return (
     <div className="w-full bg-primary mt-12 p-4 py-24">
       <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
@@ -312,6 +294,8 @@ const GmailRegister = () => {
                 },
               })}
               type="date"
+              max="2003-01-01"
+              min="1950-01-01"
               placeholder="Birth day date"
               className={`input placeholder:text-md placeholder:font-sans placeholder:font-bold ${
                 errors.id?.type === "required"
@@ -370,9 +354,9 @@ const GmailRegister = () => {
                 AB-
               </option>
             </select>
-            {errors.semester?.type === "required" && (
+            {errors.blood?.type === "required" && (
               <span className="label-text-alt text-red-600 mt-4">
-                {errors.semester?.message}
+                {errors.blood?.message}
               </span>
             )}
           </div>
@@ -664,6 +648,31 @@ const GmailRegister = () => {
                     Booth
                   </label>
                 </div>
+                <div className="form-control w-full my-6">
+                  <label className="font-bold font-sans mx-2 text-primary">
+                    Booth Code
+                  </label>
+                  <input
+                    {...register("Booth code", {
+                      required: {
+                        value: true,
+                        message: "Booth code is Required",
+                      },
+                    })}
+                    type="text"
+                    placeholder="Booth code"
+                    className={`input mt-2 ${
+                      errors.name?.type === "required"
+                        ? "border-secondary"
+                        : "input-bordered border-2"
+                    }`}
+                  />
+                  {errors.name?.type === "required" && (
+                    <span className="label-text-alt text-red-600 mt-4">
+                      {errors.name?.message}
+                    </span>
+                  )}
+                </div>
               </div>
             ) : (
               ""
@@ -727,7 +736,7 @@ const GmailRegister = () => {
                     Transaction ID
                   </label>
                   <input
-                    {...register("Transaction ID", {
+                    {...register("transactionId", {
                       required: {
                         value: true,
                         message: "Transaction ID is Required",

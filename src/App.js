@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import spinner from "./Assets/White.mp4";
+import UpdatePassword from "./Components/Login/UpdatePassword";
 import Footer from "./Components/Shared/Footer";
 import Navbar from "./Components/Shared/Navbar";
 import NotFound from "./Components/Shared/NotFound";
@@ -75,6 +76,7 @@ function App() {
               element={<AdvisorsPanel></AdvisorsPanel>}
             ></Route>
             <Route path="/admin" element={<Admin></Admin>}></Route>
+            <Route path="/updatePassword" element={<UpdatePassword></UpdatePassword>}></Route>
             <Route path="*" element={<NotFound></NotFound>}></Route>
           </Routes>
           <Footer></Footer>
