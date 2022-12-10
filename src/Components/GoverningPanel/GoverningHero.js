@@ -13,8 +13,8 @@ const GoverningHero = ({ bannerData }) => {
       >
         <div className="flex justify-center items-start  py-12  text-center lg:py-28 lg:pb-72 h-full">
         <div>
-            <h1 className="mb-8 text-4xl lg:text-8xl font-bold  uppercase">
-              <span className="text-white">
+            <h1 className="mb-12 text-4xl lg:text-8xl font-bold pt-12 uppercase">
+              <span className="text-white ">
                 {bannerData.title.slice(0, -5)}
               </span>{" "}
               <span className="text-red-600">{bannerData.title.slice(-4)}</span>

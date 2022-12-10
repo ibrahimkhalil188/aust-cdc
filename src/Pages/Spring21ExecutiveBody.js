@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from "../Assets/Images/Sample-picture-01.png";
+import bannerImage from "../Assets/bgs/executive-01.png";
 import ExecutiveMember from '../Components/GoverningPanel/ExecutiveMember';
 import GoverningHero from '../Components/GoverningPanel/GoverningHero';
 

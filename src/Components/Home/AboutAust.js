@@ -1,5 +1,5 @@
 import React from "react";
-import austbg from "../../Assets/Images/austBg.png";
+import austbg from "../../Assets/Images/austaboutbg.png";
 import austlogo from "../../Assets/Images/aust_logo.svg";
 
 const EventWithFixedBg = () => {
@@ -28,7 +28,7 @@ const EventWithFixedBg = () => {
 
 Besides, he has contributed to the society by writing a large number of books covering a wide range of areas from human and social life, history, human development, literature, religion, biography, moral values etc.
 
-Though initially charity and welfare activities were the major focus of the Mission agenda, it has expanded its arena of activities leaning towards sustainable development strategies with the passage of time since early 1980s.
+Though initially charity and welfare activities were the major focus of the Mission agenda, it has expanded its arena of activities leaning towards sustainable development strategies with the passage of time since early 1980s. <a className=" hover:text-sky-300 hover:text-bold" href="https://www.aust.edu/">See more...</a>
               </p>
             </div>
             <img

@@ -13,6 +13,8 @@ module.exports = {
 "primary": "#1B1C41",
         
 "secondary": "#E62B36",
+
+"hoverRed" : "#87000D",
         
 "accent": "#0f0c29",
         

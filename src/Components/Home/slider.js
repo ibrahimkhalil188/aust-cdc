@@ -10,9 +10,10 @@ import "../../Style/slider.style.css";
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-import image1 from "../../Assets/Images/slider_one-01.png";
-import image3 from "../../Assets/Images/slider_three-01.png";
-import image2 from "../../Assets/Images/slider_two-01.png";
+import image1 from "../../Assets/Images/homepage1-01.png";
+import image2 from "../../Assets/Images/homepage2-01.png";
+import image3 from "../../Assets/Images/homepage3-01.png";
+import image4 from "../../Assets/Images/homepage4-01.png";
 const Slider = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const Slider = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -28,7 +29,7 @@ const Slider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper lg:h-[85vh] relative"
+        className="mySwiper relative"
       >
         <SwiperSlide>
           <img className="w-full object-fill" src={image1} alt="" />
@@ -38,6 +39,9 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img className="w-full object-fill" src={image3} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="w-full object-fill" src={image4} alt="" />
         </SwiperSlide>
       </Swiper>
     </>

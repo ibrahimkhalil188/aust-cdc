@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../../Assets/Images/Sample-picture-01.png";
+import heroImage from "../../Assets/bgs/event-01.png";
 const EventHero = () => {
   return (
     <div>
@@ -8,9 +8,9 @@ const EventHero = () => {
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundPosition: "center",
-          backgroundSize: "100% 100%",
+          backgroundSize: "100% ",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
+          //height: "100vh",
         }}
       >
         <div className=""></div>

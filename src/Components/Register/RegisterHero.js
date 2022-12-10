@@ -13,8 +13,8 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 
 import { Link } from "react-router-dom";
 import image1 from "../../Assets/Images/regis_one.png";
-import image2 from "../../Assets/Images/regis_three.png";
-import image3 from "../../Assets/Images/regis_two.png";
+import image2 from "../../Assets/Images/regis_two-01.png";
+import image3 from "../../Assets/Images/regis_three-01.png";
 const RegisterSlider = () => {
   return (
     <>

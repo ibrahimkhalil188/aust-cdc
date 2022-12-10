@@ -11,9 +11,7 @@ import "../../Style/slider.style.css";
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
 
-import image1 from "../../Assets/Images/slider_one-01.png";
-import image3 from "../../Assets/Images/slider_three-01.png";
-import image2 from "../../Assets/Images/slider_two-01.png";
+import image1 from "../../Assets/bgs/contactus.png";
 const ContactSlider = () => {
   return (
     <div>
@@ -29,17 +27,12 @@ const ContactSlider = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper h-[85vh] relative"
+        className="mySwiper  relative"
       >
         <SwiperSlide>
           <img className="w-full object-fill" src={image1} alt="" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full object-fill" src={image2} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full object-fill" src={image3} alt="" />
-        </SwiperSlide>
+      
       </Swiper>
     </div>
   );
