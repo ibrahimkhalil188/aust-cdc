@@ -24,6 +24,7 @@ const RegisterInstruction = () => {
       ]
   return (
     <div>
+<<<<<<< HEAD
       <div className="">
       <div> <h1 className="text-center text-4xl lg:text-6xl mt-8 lg:mt-24 font-semibold"><span className="text-primary uppercase">  Register's</span> <span className="text-secondary uppercase">Instruction</span></h1>
        </div>
@@ -33,6 +34,20 @@ const RegisterInstruction = () => {
           AUSTCDC is welcoming all the students of AUST to join the club for developing themselves as more career oriented, and grab the opportunity to be guided under the supervision of proper mentors. The vast vision of the club is to create a common ground for all departments’ students and composition their enthusiasm.
 
 </p><p className="mx-32 py-2 pb-6 text-justify">So, Don't be late! Fill up the form now & Complete your registration.
+=======
+      <div className=" bg-primary skew-y-12 mt-16 lg:mt-48">
+        <div className="text-white text-4xl -skew-y-12 text-center">
+          <h1 className="pt-12">Instruction set</h1>
+          <p className=" mx-6 lg:mx-32 py-12 pb-24">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla,
+            asperiores. Reprehenderit asperiores eius molestias quia, explicabo
+            ducimus quidem tenetur maiores mollitia magnam consequuntur
+            voluptatibus voluptatum culpa at quae architecto laboriosam. Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Cum atque a
+            cumque facere! Consequatur cupiditate ipsum vel asperiores,
+            dignissimos eveniet soluta numquam nesciunt itaque, hic minus
+            architecto, iure sed est?
+>>>>>>> 4345a7245f4d01748f62ad6ea4d7025f7bac69e4
           </p>
           <p className="mx-32 py-2 pb-6 text-justify ">Step-1: 𝐏𝐚𝐲 𝟏𝟎𝟎 𝐁𝐃𝐓 𝐢𝐧 𝐜𝐚𝐬𝐡 𝐚𝐭 𝐨𝐮𝐫 𝐛𝐨𝐨𝐭𝐡(𝐀𝐔𝐒𝐓 𝐏𝐥𝐚𝐳𝐚) 𝐨𝐫 𝐩𝐚𝐲 𝟏𝟎𝟐 𝐁𝐃𝐓 & Keep you Transaction Id.
           

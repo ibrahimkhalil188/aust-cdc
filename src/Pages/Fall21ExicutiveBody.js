@@ -11,6 +11,7 @@ const Fall21ExecutiveBody = () => {
   const ExecutiveMemberList = [
     {
       id: "1",
+<<<<<<< HEAD
       //image: ,
       name: "SYED SHAHEERUDDIN AHMED",
       title: "PRESIDENT",
@@ -24,6 +25,14 @@ const Fall21ExecutiveBody = () => {
       title: "TREASURER",
       
 
+=======
+      name: "lorem mamu",
+      title:"President",
+      about:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae consectetur, ducimus quo doloremque pariatur eveniet voluptas ex facilis voluptatem quasi obcaecati dolores accusantium odit iusto. Dolore veniam dignissimos eos libero.",
+      facebookUrl:"https://www.facebook.com/",
+      LinkedInUrl:"https://www.linkedin.com/",
+>>>>>>> 4345a7245f4d01748f62ad6ea4d7025f7bac69e4
     },
     {
       id: "3",

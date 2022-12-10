@@ -31,10 +31,10 @@ export const EmailJs = () => {
       <div className="bg-white h-[0.5px]"></div>
 
       <div className="lg:flex justify-between font-sans mt-2 text-sm">
-        <div className="mr-4">
+        <div className="lg:mr-4">
           <label className="block">Name</label>
           <input
-            className="input input-sm bg-[#b8b3d3] text-black"
+            className="input w-full input-sm bg-[#b8b3d3] text-black"
             type="text"
             name="user_name"
           />
@@ -42,7 +42,7 @@ export const EmailJs = () => {
         <div>
         <label className="block">Email</label>
         <input
-          className="input input-sm bg-[#b8b3d3] text-black"
+          className="input w-full input-sm bg-[#b8b3d3] text-black"
           type="email"
           name="user_email"
         />
