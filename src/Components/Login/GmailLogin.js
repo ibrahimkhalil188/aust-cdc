@@ -36,9 +36,9 @@ const GmailLogin = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="flex h-[90vh] w-[90%] m-auto mt-[-50px] shadow-2xl">
+    <div className="flex h-[84.8vh] w-[90%] m-auto mb-24 mt-[-50px] shadow-2xl">
       <div className="w-1/2 bg-primary rounded-l-2xl">
-        <img src={login} alt="" />
+        <img src={login} alt="" className=""/>
       </div>
       <div className="w-1/2 bg-base-100 rounded-r-2xl">
         <div className="lg:flex">
