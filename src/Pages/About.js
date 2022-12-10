@@ -2,9 +2,8 @@ import React from 'react';
 import AboutHero from '../Components/About/AboutHero';
 import ClubFoundingMember from '../Components/About/ClubFoundingMember';
 import JoinUs from '../Components/About/JoinUs';
-//import LogoAndVideo from '../Components/About/LogoAndVideo';
+import LogoAndVideo from '../Components/About/LogoAndVideo';
 import LogoExplane from '../Components/About/LogoExplane';
-import ClubStructure from '../Components/About/ClubStructure';
 import AustCdcPillers from '../Components/Home/AustCdcPillers';
 
 const About = () => {
@@ -12,11 +11,10 @@ const About = () => {
     return (
         <div>
             <AboutHero></AboutHero>
-            <AustCdcPillers></AustCdcPillers>
+           <LogoAndVideo>Logo with explanation</LogoAndVideo>
             <JoinUs></JoinUs>
             <LogoExplane></LogoExplane>
-            
-            <ClubStructure></ClubStructure>
+            <AustCdcPillers></AustCdcPillers>
             <ClubFoundingMember></ClubFoundingMember>
         </div>
     );

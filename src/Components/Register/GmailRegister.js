@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import logo from "../../Assets/Logo/austlogo.png";
 import auth from "../../firebase.init";
 import LoadingSpinner from "../Shared/LoadingSpinner";
 const GmailRegister = () => {
-  const [userData, setUserDAta] = useState(" ")
+  const [openModal, setOpenModal] = useState(true);
+  const [userData, setUserDAta] = useState(" ");
   const [other, setOther] = useState(false);
   const [payment, setPayment] = useState("");
   const ImageStorageKey = "061586b1ffa305eaa49cd86d4b62eea7";
@@ -14,7 +15,7 @@ const GmailRegister = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm({
     defaultValues: {
       payment: "",
@@ -22,21 +23,18 @@ const GmailRegister = () => {
     },
   });
 
-  const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
   const onSubmit = (data) => {
-    const password ="#$"+(Math.floor(Math.random(100)*100000000)+1)+"%@";
-    createUserWithEmailAndPassword(data.email,password)
-   if(loading){
-    return <LoadingSpinner></LoadingSpinner>
-   }
-    if(error){
-      toast.error(error?.message)
-    }else{
+    const password =
+      "#$" + (Math.floor(Math.random(100) * 100000000) + 1) + "%@";
+    createUserWithEmailAndPassword(data.email, password);
+    if (loading) {
+      return <LoadingSpinner></LoadingSpinner>;
+    }
+    if (error) {
+      toast.error(error?.message);
+    } else {
       const image = data.image[0];
       const formData = new FormData();
       formData.append("image", image);
@@ -48,20 +46,24 @@ const GmailRegister = () => {
         .then((res) => res.json())
         .then((result) => {
           if (result.success) {
-            data = { ...data, image: result.data.url,status:"pending",onetimePass:password};
+            data = {
+              ...data,
+              image: result.data.url,
+              status: "pending",
+              onetimePass: password,
+            };
             console.log(result.data.url);
             setUserDAta(data);
-            reset()
+            reset();
           }
         });
     }
-      
-    }
-    useEffect(()=>{
-        if(error){
-          toast.error(error?.message)
-        }else{
-          fetch("http://localhost:5000/users", {
+  };
+  useEffect(() => {
+    if (error) {
+      toast.error(error?.message);
+    } else {
+      fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -70,24 +72,24 @@ const GmailRegister = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data.acknowledged) {
             toast.success("Your registered successfully");
+            setOpenModal(true);
           }
         });
-        }
-    },[userData,error])
+    }
+  }, [userData, error]);
 
   return (
     <div className="w-full bg-primary mt-12 p-4 py-24">
-      <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl ">
+      <div className="w-full lg:w-[90%] m-auto shadow-2xl bg-white rounded-3xl">
         <div className="flex justify-center pt-12">
           <img className="w-72" src={logo} alt="" />
         </div>
         <h1 className="text-4xl font-sans font-bold text-center uppercase text-primary pt-4 pb-12">
           <span className="text-secondary">Register</span> yourself
         </h1>
-
+       
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="font-sans font-bold mx-6 lg:mx-24 my-6"
@@ -606,7 +608,8 @@ const GmailRegister = () => {
               >
                 Online
               </label>
-              <input id="online"
+              <input
+                id="online"
                 {...register("payment", {
                   required: {
                     value: "payment",

@@ -3,7 +3,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import login from "../../Assets/bgs/login.png";
+import login from "../../Assets/Logo/austlogo.png";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 const GmailLogin = () => {
@@ -36,9 +36,9 @@ const GmailLogin = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="flex h-[84.8vh] w-[90%] m-auto mb-24 mt-[-50px] shadow-2xl">
+    <div className="flex h-[90vh] w-[90%] m-auto mt-[-50px] shadow-2xl">
       <div className="w-1/2 bg-primary rounded-l-2xl">
-        <img src={login} alt="" className=""/>
+        <img src={login} alt="" />
       </div>
       <div className="w-1/2 bg-base-100 rounded-r-2xl">
         <div className="lg:flex">

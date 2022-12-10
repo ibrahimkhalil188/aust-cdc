@@ -20,11 +20,10 @@ const SubNavbar = () => {
             <a href="https://www.facebook.com/" target="blank"><FaInstagramSquare className="mx-1 text-md  hover:scale-125"></FaInstagramSquare></a>
             <a href="https://www.facebook.com/" target="blank"><IoLogoYoutube className="mx-1 text-md  hover:scale-125"></IoLogoYoutube></a>
           </div>
-          <div className="flex justify-center items-center mt-1  lg:mr-[-24px] text-white lg:text-sm  space-x-2 tracking-wider cursor-pointer">
-          <Link to="/admin"><span className="hover:text-secondary">admin</span></Link>
-            <Link to="/login"><span className="hover:text-secondary">Sign in</span></Link>
-            <div className="w-[.5px] bg-white h-4 mx-4"></div>
-            <Link to="/register"><span className="hover:text-secondary">Sign up</span></Link>
+          <div className="flex justify-center items-center mt-1 text-white cursor-pointer">
+            <Link to="/login"><span >Sign in</span></Link>
+            <div className="w-[.5px] bg-white h-4 mx-2"></div>
+            <Link to="/register"><span>Sign up</span></Link>
           </div>
         </div>
       </div>

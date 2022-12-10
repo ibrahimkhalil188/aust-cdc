@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-@import url("https://fonts.cdnfonts.com/css/futura");
-
-body {
-  margin: 0;
-  font-family: Futura, sans-serif;
-=======
 @import url("https://fonts.cdnfonts.com/css/futura?styles=65266,65267,65264,65265,65268,65269,65270,65271");
 
 body {
   margin: 0;
   font-family: "Futura", sans-serif;
->>>>>>> 4345a7245f4d01748f62ad6ea4d7025f7bac69e4
 }
 
 @tailwind base;

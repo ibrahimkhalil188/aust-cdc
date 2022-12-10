@@ -18,7 +18,7 @@ const UpdatePassword = () => {
   }
   return (
     <div className="App">
-      <input className='input'
+      <input className='input '
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
